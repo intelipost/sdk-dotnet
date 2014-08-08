@@ -59,14 +59,6 @@
       <Project>{d27837bd-5067-4c8b-acbf-51bd8b956737}</Project>
       <Name>Intelipost.API</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Intelipost.Model\Intelipost.Model.csproj">
-      <Project>{5189d0f8-c591-4945-93f3-d33f77382a7b}</Project>
-      <Name>Intelipost.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Intelipost.Util\Intelipost.Util.csproj">
-      <Project>{F6042AB3-776E-4BEE-8AAD-ED970BF41E70}</Project>
-      <Name>Intelipost.Util</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

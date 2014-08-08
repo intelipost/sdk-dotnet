@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Intelipost.API;
-using Intelipost.Model;
-using Intelipost.Util.Enum;
+using Intelipost.API.Model;
+using Intelipost.API.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Intelipost.UnitTest
@@ -41,7 +41,7 @@ namespace Intelipost.UnitTest
                 CostOfGoods = 15.99,
                 Height = 10,
                 Length = 25,
-                VolumeType = VolumeType.ENVELOPE,
+                VolumeType = VolumeType.Envelope,
                 Weight = 10,
                 Width = 10
             };
@@ -51,7 +51,7 @@ namespace Intelipost.UnitTest
                 CostOfGoods = 30.99,
                 Height = 10,
                 Length = 25,
-                VolumeType = VolumeType.BOX,
+                VolumeType = VolumeType.Box,
                 Weight = 2,
                 Width = 20
             };
@@ -59,7 +59,7 @@ namespace Intelipost.UnitTest
             volumes.Add(volume1);
             volumes.Add(volume2);
 
-            var modelRequest = new Model.Request()
+            var modelRequest = new Request()
             {
                 OriginZipCode = "01001-000",
                 DestinationZipCode = "20000-000",

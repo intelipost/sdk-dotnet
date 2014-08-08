@@ -44,12 +44,6 @@
     <Compile Include="Response.cs" />
     <Compile Include="Volume.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Intelipost.Util\Intelipost.Util.csproj">
-      <Project>{f6042ab3-776e-4bee-8aad-ed970bf41e70}</Project>
-      <Name>Intelipost.Util</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

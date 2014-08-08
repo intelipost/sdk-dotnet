@@ -44,10 +44,6 @@
     <Compile Include="Quote.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Intelipost.Infrastructure\Intelipost.Infrastructure.csproj">
-      <Project>{775c91c8-7e98-4834-b025-d4e5716df8a6}</Project>
-      <Name>Intelipost.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Intelipost.Model\Intelipost.Model.csproj">
       <Project>{5189d0f8-c591-4945-93f3-d33f77382a7b}</Project>
       <Name>Intelipost.Model</Name>
