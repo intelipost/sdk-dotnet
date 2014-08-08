@@ -1,0 +1,10 @@
+C:\Projetos\BetaSystems\Intelipost\Intelipost.Util\obj\Debug\Intelipost.Util.csprojResolveAssemblyReference.cache
+C:\Projetos\BetaSystems\Intelipost\Intelipost.Util\bin\Debug\Intelipost.Util.dll
+C:\Projetos\BetaSystems\Intelipost\Intelipost.Util\bin\Debug\Intelipost.Util.pdb
+C:\Projetos\BetaSystems\Intelipost\Intelipost.Util\obj\Debug\Intelipost.Util.dll
+C:\Projetos\BetaSystems\Intelipost\Intelipost.Util\obj\Debug\Intelipost.Util.pdb
+E:\BetaSystems\Projetos\Intelipost\Intelipost.Util\bin\Debug\Intelipost.Util.dll
+E:\BetaSystems\Projetos\Intelipost\Intelipost.Util\bin\Debug\Intelipost.Util.pdb
+E:\BetaSystems\Projetos\Intelipost\Intelipost.Util\obj\Debug\Intelipost.Util.csprojResolveAssemblyReference.cache
+E:\BetaSystems\Projetos\Intelipost\Intelipost.Util\obj\Debug\Intelipost.Util.dll
+E:\BetaSystems\Projetos\Intelipost\Intelipost.Util\obj\Debug\Intelipost.Util.pdb
