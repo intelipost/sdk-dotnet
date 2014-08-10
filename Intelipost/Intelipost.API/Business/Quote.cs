@@ -1,17 +1,21 @@
-﻿using System;
-using Intelipost.API.Infrastructure.JsonRequest;
+﻿using Intelipost.API.Model;
+using Request = Intelipost.API.Model.Request;
 
 namespace Intelipost.API.Business
 {
-    public class Quote
+    /// <summary>
+    /// Classe destinada a tratar todas as regras de negócios, aplicadas a API, da cotação.
+    /// </summary>
+    internal class Quote
     {
-        public void RequestNewQuote(Model.Request modelRequest)
+        /// <summary>
+        /// Executa a requisição contra a InteliPost.
+        /// </summary>
+        /// <param name="modelRequest">Entidade Request devidamente preenchida para a cotação.</param>
+        /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
+        internal Response RequestNewQuote(Request modelRequest)
         {
-            if (String.IsNullOrWhiteSpace(Configure.PublicInstance.ApiKey)) throw new Exception("Você precisa configurar sua chave de acesso para utilizar esta API.");
-
-            var url = String.Format("{0}/{1}", Configure.PublicInstance.ApiUrl, "quote");
-
-            var a = new Request().Execute<Model.Request>(url, Configure.PublicInstance.ApiKey, modelRequest);
+            return new Infrastructure.JsonRequest.Request().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "quote", "POST", modelRequest);
         }
     }
 }

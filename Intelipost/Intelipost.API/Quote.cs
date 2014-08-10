@@ -1,10 +1,20 @@
-﻿namespace Intelipost.API
+﻿using Intelipost.API.Model;
+
+namespace Intelipost.API
 {
+    /// <summary>
+    /// Classe destinada a expor as requisições para a cotação.
+    /// </summary>
     public class Quote
     {
-        public void Request(Model.Request modelRequest)
+        /// <summary>
+        /// Execute a requisição de Cotação.
+        /// </summary>
+        /// <param name="modelRequest">Entidade Request devidamente preenchida para a cotação.</param>
+        /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
+        public Response Request(Request modelRequest)
         {
-            new Business.Quote().RequestNewQuote(modelRequest);
+            return new Business.Quote().RequestNewQuote(modelRequest);
         }
     }
 }

@@ -1,0 +1,7 @@
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Release\Intelipost.UnitTest.dll
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Release\Intelipost.UnitTest.pdb
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Release\Intelipost.API.dll
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Release\Intelipost.API.pdb
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Release\Intelipost.UnitTest.csprojResolveAssemblyReference.cache
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Release\Intelipost.UnitTest.dll
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Release\Intelipost.UnitTest.pdb

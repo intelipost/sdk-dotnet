@@ -1,0 +1,1 @@
+10/08/2014 06:18:26 > RESPONSE: {"status":"ERROR","content":null,"time":"1.2 ms","OperationTime":"4171ms","messages":[{"type":"ERROR","text":"Este pedido requer autentica├º├úo HTTP.","key":"error.401"}]}

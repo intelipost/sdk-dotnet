@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
-using Intelipost.API;
+﻿using Intelipost.API;
 using Intelipost.API.Model;
 using Intelipost.API.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
 
 namespace Intelipost.UnitTest
 {
     /// <summary>
-    /// Summary description for TestQuote
+    /// TestQuote é destinado a fazer uma cotação teste e verificar se o seu retorno está correto.
     /// </summary>
     [TestClass]
     public class TestQuote
@@ -30,6 +31,9 @@ namespace Intelipost.UnitTest
             }
         }
 
+        /// <summary>
+        /// TestRequest é destinado a requisição teste para a cotação.
+        /// </summary>
         [TestMethod]
         public void TestRequest()
         {
@@ -66,7 +70,16 @@ namespace Intelipost.UnitTest
                 Volumes = volumes
             };
 
-            new Quote().Request(modelRequest);
+            try
+            {
+                var modelResponse = new Quote().Request(modelRequest);
+
+                Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
         }
     }
 }

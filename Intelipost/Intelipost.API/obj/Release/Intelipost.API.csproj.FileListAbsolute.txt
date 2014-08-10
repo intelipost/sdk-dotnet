@@ -1,0 +1,6 @@
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Release\Intelipost.API.dll
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Release\Intelipost.API.pdb
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Release\Intelipost.API.Resources.resources
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Release\Intelipost.API.csproj.GenerateResource.Cache
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Release\Intelipost.API.dll
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Release\Intelipost.API.pdb

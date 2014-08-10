@@ -24,10 +24,10 @@ E:\BetaSystems\Projetos\Intelipost\Intelipost.API\bin\Debug\Newtonsoft.Json.xml
 E:\BetaSystems\Projetos\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.csprojResolveAssemblyReference.cache
 E:\BetaSystems\Projetos\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.dll
 E:\BetaSystems\Projetos\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.pdb
+E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Resources\curl.exe
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Intelipost.API.dll
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Intelipost.API.pdb
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Newtonsoft.Json.dll
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Newtonsoft.Json.xml
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.csprojResolveAssemblyReference.cache
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.dll
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.pdb
