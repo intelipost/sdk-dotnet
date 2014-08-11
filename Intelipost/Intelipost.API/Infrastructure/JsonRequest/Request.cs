@@ -1,5 +1,4 @@
-﻿using System.Resources;
-using System.Windows;
+﻿using System.Net;
 using Intelipost.API.Infrastructure.Log;
 using Intelipost.API.Model;
 using Newtonsoft.Json;
@@ -13,64 +12,53 @@ namespace Intelipost.API.Infrastructure.JsonRequest
     /// <summary>
     /// Classe interna que trata, de forma genérica, as requisições feitas no CUrl.
     /// </summary>
-    internal class Request
+    internal class Request<T> where T : class
     {
+        internal HttpWebRequest HttpWebRequest { get; set; }
+        internal HttpWebResponse HttpWebResponse { get; set; }
+
         /// <summary>
-        /// Cria os argumentos que serão enviados ao CUrl.
+        /// Cria a requisição para o envio.
         /// </summary>
         /// <param name="apiKey">Chave da aplicação.</param>
         /// <param name="url">URL para a requisição.</param>
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
-        /// <param name="requestData">Entidade devidamente preenchida.</param>
-        /// <returns>Retorna uma string para ser executada no CUrl.</returns>
-        private string CreateRequest(string apiKey, string url, string action, string method, object requestData)
+        internal void CreateRequest(string apiKey, string url, string action, string method)
         {
-            return String.Format(@"curl -k -H ""api_key: {0}; Content-Type: application/json; charset=UTF-8"" -X {1} -d ""{2}"" {3}/{4}", apiKey, method, requestData, url, action);
+            HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action));
+            HttpWebRequest.Accept = "application/json";
+            HttpWebRequest.ContentType = "application/json";
+            HttpWebRequest.Headers.Add("api_key", apiKey);
+            HttpWebRequest.Headers.Add("charset", "UTF-8");
+            HttpWebRequest.AutomaticDecompression = DecompressionMethods.GZip;
+            HttpWebRequest.Method = method;
         }
 
         /// <summary>
-        /// Inicia o processo de execução e resposta contra o CUrl da InteliPost.
+        /// Prepara o conteúdo da requisição para envio.
         /// </summary>
-        /// <param name="cUrlAgurments">Argumentos necessários para enviar a requisição.</param>
-        /// <returns>Retorna a resposta da InteliPost.</returns>
-        private string StartCUrlProcess(string cUrlAgurments)
+        /// <param name="request">Entidade devidamente preenchida.</param>
+        internal void WriteStream(Model.Request<T> request)
         {
-            string tempExeName = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Resources\\curl.exe";
-
-            using (var fileStream = new FileStream(tempExeName, FileMode.CreateNew, FileAccess.Write))
+            using (var streamWriter = new StreamWriter(HttpWebRequest.GetRequestStream()))
             {
-                byte[] bytes = Resources.GetCUrlExe();
-                fileStream.Write(bytes, 0, bytes.Length);
+                streamWriter.Write(JsonConvert.SerializeObject(request.Content));
             }
+        }
 
-            var cUrlProcess = new Process
+        /// <summary>
+        /// Faz a leitura da resposta enviada pelo servidor da InteliPost.
+        /// </summary>
+        /// <returns></returns>
+        internal String ReadResponse()
+        {
+            if (HttpWebResponse == null) return string.Empty;
+
+            using (var streamReader = new StreamReader(HttpWebResponse.GetResponseStream()))
             {
-                EnableRaisingEvents = false,
-                StartInfo =
-                {
-                    FileName = tempExeName,
-                    Arguments = cUrlAgurments,
-                    RedirectStandardOutput = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                }
-            };
-
-            cUrlProcess.Start();
-
-            var response = "";
-
-            while (!cUrlProcess.StandardOutput.EndOfStream)
-            {
-                response += cUrlProcess.StandardOutput.ReadLine();
+                return streamReader.ReadToEnd();
             }
-
-            cUrlProcess.WaitForExit();
-
-            new FileInfo(tempExeName).Delete();
-
-            return response;
         }
 
         /// <summary>
@@ -80,25 +68,29 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="url">URL para a requisição.</param>
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
-        /// <param name="requestData">Entidade devidamente preenchida.</param>
+        /// <param name="request">Entidade devidamente preenchida.</param>
         /// <returns>Retorna uma Entidade padrão de resposta da InteliPost.</returns>
-        internal Response Execute(string apiKey, string url, string action, string method, Model.Request requestData)
+        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            var responseData = new Response();
-
-            var cUrlArguments = CreateRequest(apiKey, url, action, method, JsonConvert.SerializeObject(requestData));
+            var responseData = new Response<T>();
 
             try
             {
+                CreateRequest(apiKey, url, action, method);
+
+                WriteStream(request);
+
                 if (Business.Configure.PublicInstance.Logging)
                 {
-                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now, cUrlArguments));
+                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now, JsonConvert.SerializeObject(request)));
                 }
 
-                responseData = JsonConvert.DeserializeObject<Response>(StartCUrlProcess(cUrlArguments));
+                HttpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse();
+
+                responseData = JsonConvert.DeserializeObject<Response<T>>(ReadResponse());
             }
             catch (Exception ex)
             {

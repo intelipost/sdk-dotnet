@@ -3,18 +3,20 @@ using System.Collections.Generic;
 
 namespace Intelipost.API.Model
 {
-    public class Response
+    public class Response<T> where T : class
     {
         /// <summary>
         /// Status da requisição.
         /// </summary>
         [JsonProperty("status")]
         public string Status { get; set; }
+
         /// <summary>
         /// O conteúdo da requisição.
         /// </summary>
         [JsonProperty("content")]
-        public string Content { get; set; }
+        public T Content { get; set; }
+
         /// <summary>
         /// O tempo da requisição por parte da InteliPost.
         /// </summary>

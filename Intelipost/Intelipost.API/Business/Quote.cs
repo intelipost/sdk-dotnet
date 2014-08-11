@@ -1,5 +1,4 @@
 ﻿using Intelipost.API.Model;
-using Request = Intelipost.API.Model.Request;
 
 namespace Intelipost.API.Business
 {
@@ -11,11 +10,11 @@ namespace Intelipost.API.Business
         /// <summary>
         /// Executa a requisição contra a InteliPost.
         /// </summary>
-        /// <param name="modelRequest">Entidade Request devidamente preenchida para a cotação.</param>
+        /// <param name="request">Entidade Request devidamente preenchida para a cotação.</param>
         /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
-        internal Response RequestNewQuote(Request modelRequest)
+        internal Response<Model.Quote> RequestNewQuote(Request<Model.Quote> request)
         {
-            return new Infrastructure.JsonRequest.Request().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "quote", "POST", modelRequest);
+            return new Infrastructure.JsonRequest.Request<Model.Quote>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "quote", "POST", request);
         }
     }
 }

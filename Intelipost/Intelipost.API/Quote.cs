@@ -10,11 +10,11 @@ namespace Intelipost.API
         /// <summary>
         /// Execute a requisição de Cotação.
         /// </summary>
-        /// <param name="modelRequest">Entidade Request devidamente preenchida para a cotação.</param>
+        /// <param name="request">Entidade Request devidamente preenchida para a cotação.</param>
         /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
-        public Response Request(Request modelRequest)
+        public Response<Model.Quote> RequestNewQuote(Request<Model.Quote> request)
         {
-            return new Business.Quote().RequestNewQuote(modelRequest);
+            return new Business.Quote().RequestNewQuote(request);
         }
     }
 }

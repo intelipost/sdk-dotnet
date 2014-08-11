@@ -26,13 +26,3 @@ E:\BetaSystems\Projetos\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json
 E:\BetaSystems\Projetos\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csprojResolveAssemblyReference.cache
 E:\BetaSystems\Projetos\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.dll
 E:\BetaSystems\Projetos\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.pdb
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Resources\curl.exe
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.UnitTest.dll
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.UnitTest.pdb
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.API.dll
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.dll
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.API.pdb
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.xml
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csprojResolveAssemblyReference.cache
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.dll
-E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.pdb

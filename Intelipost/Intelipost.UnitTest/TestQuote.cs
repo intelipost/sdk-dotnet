@@ -1,4 +1,4 @@
-﻿using Intelipost.API;
+﻿using System.Net.Configuration;
 using Intelipost.API.Model;
 using Intelipost.API.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -63,16 +63,19 @@ namespace Intelipost.UnitTest
             volumes.Add(volume1);
             volumes.Add(volume2);
 
-            var modelRequest = new Request()
+            var modelRequest = new Request<Quote>()
             {
-                OriginZipCode = "01001-000",
-                DestinationZipCode = "20000-000",
-                Volumes = volumes
+                Content = new Quote()
+                {
+                    OriginZipCode = "01001-000",
+                    DestinationZipCode = "20000-000",
+                    Volumes = volumes
+                }
             };
 
             try
             {
-                var modelResponse = new Quote().Request(modelRequest);
+                var modelResponse = new API.Quote().RequestNewQuote(modelRequest);
 
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }

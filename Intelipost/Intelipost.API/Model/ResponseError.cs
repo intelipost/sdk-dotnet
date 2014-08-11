@@ -9,11 +9,13 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("type")]
         public string Type { get; set; }
+
         /// <summary>
         /// Texto do erro.
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
+
         /// <summary>
         /// Chave do erro.
         /// </summary>
