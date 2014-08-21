@@ -24,6 +24,10 @@
         /// Se o Log será ativado para cada requisição feita.
         /// </summary>
         internal bool Logging { get; set; }
+        /// <summary>
+        /// Se o Log estiver ativo, é necessário passar o caminho completo de onde os arquivos serão gravados.
+        /// </summary>
+        internal string LogPath { get; set; }
 
         /// <summary>
         /// Classe destinada a configuração de acesso a API.
