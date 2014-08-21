@@ -31,6 +31,8 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             HttpWebRequest.ContentType = "application/json";
             HttpWebRequest.Headers.Add("api_key", apiKey);
             HttpWebRequest.Headers.Add("charset", "UTF-8");
+            HttpWebRequest.Headers.Add(".NetVersion", Environment.Version.ToString());
+            HttpWebRequest.Headers.Add("APIVersion", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);
             HttpWebRequest.AutomaticDecompression = DecompressionMethods.GZip;
             HttpWebRequest.Method = method;
         }

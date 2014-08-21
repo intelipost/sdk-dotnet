@@ -14,7 +14,7 @@ namespace Intelipost.API.Infrastructure.Log
         /// <param name="plainText">O texto aberto para ser gravado no arquivo.</param>
         internal void Insert(string plainText)
         {
-            var path = Path.GetDirectoryName("C:\\InteliPost API Log\\");
+            var path = Path.GetDirectoryName(Business.Configure.PublicInstance.LogPath);
 
             if (!Directory.Exists(path))
             {
