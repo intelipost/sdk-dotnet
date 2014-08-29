@@ -19,8 +19,15 @@ Documentation
 Up-to-date documentation at: http://docs.intelipost.com.br
 
 
+Dependencies
+--------------------
+
+- .NETFramework ≥ 4.0
+- Newtonsoft.Json (≥ 6.0.4)
+
 Releases
 --------------------
+
 ##Release 1.0.3:
 - Log path issue corrected;
 
