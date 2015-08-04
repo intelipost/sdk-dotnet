@@ -15,7 +15,7 @@
         /// <summary>
         /// URL da API da Intelipost.
         /// </summary>
-        internal string ApiUrl { get { return "https://api.intelipost.com.br/api/v1"; } }
+        internal string ApiUrl { get { return "https://api-testing.intelipost.com.br/api/v1"; } }
         /// <summary>
         /// Key de acesso para a API.
         /// </summary>
