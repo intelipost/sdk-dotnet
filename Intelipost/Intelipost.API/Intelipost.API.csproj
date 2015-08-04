@@ -52,6 +52,7 @@
     <Compile Include="Business\Configure.cs" />
     <Compile Include="Business\ReadyForShipment.cs" />
     <Compile Include="Business\Quote.cs" />
+    <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
     <Compile Include="Infrastructure\JsonRequest\Request.cs" />
     <Compile Include="Infrastructure\Log\Logger.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadyForShipment.cs" />
     <Compile Include="Quote.cs" />
+    <Compile Include="ShipmentOrder.cs" />
     <Compile Include="Utilities\VolumeType.cs" />
   </ItemGroup>
   <ItemGroup>
