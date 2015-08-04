@@ -8,9 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - API Layer", "0 - API Layer", "{7F7CC6AD-A8F1-4BEF-AFFA-BB07A492A398}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Test Layer", "1 - Test Layer", "{21751A4A-1B09-46E4-9923-DE6455B854BB}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\OLD DOT NET API\api-dotnet-master\Intelipost\Intelipost.UnitTest\TestShipmentOrder.cs = ..\..\..\..\Desktop\OLD DOT NET API\api-dotnet-master\Intelipost\Intelipost.UnitTest\TestShipmentOrder.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intelipost.UnitTest", "Intelipost.UnitTest\Intelipost.UnitTest.csproj", "{4991225A-6CF9-4768-B066-16EA00DA60A4}"
 EndProject

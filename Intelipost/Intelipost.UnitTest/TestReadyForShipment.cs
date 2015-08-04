@@ -37,7 +37,7 @@ namespace Intelipost.UnitTest
         [TestMethod]
         public void TestRequest()
         {
-            new TestConfigure().TestIntialize();
+            new TestConfigure().TestInitialize();
 
             var modelRequest = new Request<ReadyForShipment>()
             {

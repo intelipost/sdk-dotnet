@@ -54,6 +54,7 @@
     <Compile Include="TestConfigure.cs" />
     <Compile Include="TestReadyForShipment.cs" />
     <Compile Include="TestQuote.cs" />
+    <Compile Include="TestShipmentOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Intelipost.API\Intelipost.API.csproj">
