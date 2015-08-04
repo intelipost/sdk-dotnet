@@ -31,3 +31,10 @@ E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\bi
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.csprojResolveAssemblyReference.cache
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.dll
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.pdb
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Intelipost.API.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Intelipost.API.pdb
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.pdb
