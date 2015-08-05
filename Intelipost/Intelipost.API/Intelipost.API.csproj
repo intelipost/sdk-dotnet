@@ -55,7 +55,6 @@
     <Compile Include="Business\Quote.cs" />
     <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
-    <Compile Include="Infrastructure\JsonRequest\GetRequest.cs" />
     <Compile Include="Infrastructure\JsonRequest\Request.cs" />
     <Compile Include="Infrastructure\Log\Logger.cs" />
     <Compile Include="Model\DeliveryOption.cs" />
