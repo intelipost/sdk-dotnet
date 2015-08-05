@@ -14,7 +14,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
         internal Response<Model.GetLabel> RequestGetLabel(string order_number, string shipment_order_volume_number)
         {
-            return new Infrastructure.JsonRequest.GetRequest<Model.GetLabel>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/get_label/"+order_number+"/"+shipment_order_volume_number, "GET");
+            return new Infrastructure.JsonRequest.Request<Model.GetLabel>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/get_label/"+order_number+"/"+shipment_order_volume_number, "GET", null);
         }
     }
 }
