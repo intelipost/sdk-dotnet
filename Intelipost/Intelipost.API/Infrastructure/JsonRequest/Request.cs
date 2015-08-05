@@ -24,7 +24,8 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="url">URL para a requisição.</param>
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
-        internal void CreateRequest(string apiKey, string url, string action, string method)
+        /// <param name="debug_hash">Hash para utilização do modo debug</param>
+        internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null)
         {
             HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action));
             HttpWebRequest.Accept = "application/json";
@@ -35,6 +36,8 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             HttpWebRequest.Headers.Add("APIVersion", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);
             HttpWebRequest.AutomaticDecompression = DecompressionMethods.GZip;
             HttpWebRequest.Method = method;
+            if(debug_hash != null)
+                HttpWebRequest.Headers.Add("debug", debug_hash);
         }
 
         /// <summary>
@@ -72,7 +75,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="method">Método de envio.</param>
         /// <param name="request">Entidade devidamente preenchida.</param>
         /// <returns>Retorna uma Entidade padrão de resposta da InteliPost.</returns>
-        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request)
+        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request, string debug_hash = null)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -81,7 +84,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
 
             try
             {
-                CreateRequest(apiKey, url, action, method);
+                CreateRequest(apiKey, url, action, method,debug_hash);
 
                 WriteStream(request);
 

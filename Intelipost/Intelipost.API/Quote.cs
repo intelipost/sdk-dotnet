@@ -12,9 +12,9 @@ namespace Intelipost.API
         /// </summary>
         /// <param name="request">Entidade Request devidamente preenchida para a cotação.</param>
         /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
-        public Response<Model.Quote> RequestNewQuote(Request<Model.Quote> request)
+        public Response<Model.Quote> RequestNewQuote(Request<Model.Quote> request, string debug_hash = null)
         {
-            return new Business.Quote().RequestNewQuote(request);
+            return new Business.Quote().RequestNewQuote(request,debug_hash);
         }
     }
 }
