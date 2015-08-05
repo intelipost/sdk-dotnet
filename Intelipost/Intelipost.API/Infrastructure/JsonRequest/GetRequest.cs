@@ -12,7 +12,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
     /// <summary>
     /// Classe interna que trata, de forma genérica, as requisições feitas no CUrl.
     /// </summary>
-    internal class Request<T> where T : class
+    internal class GetRequest<T> where T : class
     {
         internal HttpWebRequest HttpWebRequest { get; set; }
         internal HttpWebResponse HttpWebResponse { get; set; }
@@ -26,27 +26,13 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="method">Método de envio.</param>
         internal void CreateRequest(string apiKey, string url, string action, string method)
         {
-            HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action));
-            HttpWebRequest.Accept = "application/json";
-            HttpWebRequest.ContentType = "application/json";
+            HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}{1}", url, action));
             HttpWebRequest.Headers.Add("api_key", apiKey);
             HttpWebRequest.Headers.Add("charset", "UTF-8");
             HttpWebRequest.Headers.Add(".NetVersion", Environment.Version.ToString());
             HttpWebRequest.Headers.Add("APIVersion", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);
             HttpWebRequest.AutomaticDecompression = DecompressionMethods.GZip;
             HttpWebRequest.Method = method;
-        }
-
-        /// <summary>
-        /// Prepara o conteúdo da requisição para envio.
-        /// </summary>
-        /// <param name="request">Entidade devidamente preenchida.</param>
-        internal void WriteStream(Model.Request<T> request)
-        {
-            using (var streamWriter = new StreamWriter(HttpWebRequest.GetRequestStream()))
-            {
-                streamWriter.Write(JsonConvert.SerializeObject(request.Content));
-            }
         }
 
         /// <summary>
@@ -72,7 +58,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="method">Método de envio.</param>
         /// <param name="request">Entidade devidamente preenchida.</param>
         /// <returns>Retorna uma Entidade padrão de resposta da InteliPost.</returns>
-        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request)
+        internal Response<T> Execute(string apiKey, string url, string action, string method)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -83,11 +69,9 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             {
                 CreateRequest(apiKey, url, action, method);
 
-                WriteStream(request);
-
                 if (Business.Configure.PublicInstance.Logging)
                 {
-                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now, JsonConvert.SerializeObject(request)));
+                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now, url+"/"+action ));
                 }
 
                 HttpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse();
@@ -112,6 +96,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             {
                 new Logger().Insert(String.Format("{0} > RESPONSE: {1}", DateTime.Now, JsonConvert.SerializeObject(responseData)));
             }
+
             return responseData;
         }
     }
