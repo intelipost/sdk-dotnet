@@ -12,11 +12,7 @@ namespace Intelipost.UnitTest
     /// </summary>
     [TestClass]
     public class TestGetLabel
-    {
-        public TestGetLabel()
-        {
-        }
-
+    {       
         private TestContext testContextInstance;
 
         public TestContext TestContext
@@ -48,10 +44,7 @@ namespace Intelipost.UnitTest
 
             try
             {
-              
-
-                var modelResponse = new API.GetLabel().RequestGetLabel("pd0009","1");
-                
+                var modelResponse = new API.GetLabel().RequestGetLabel("pd0009","1");                
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)

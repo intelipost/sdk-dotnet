@@ -120,7 +120,7 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 2,
-                    OrderNumber = "pd0018",
+                    OrderNumber = "pd0020",
                     QuoteId = 291555,
                     estimated_delivery_date = "2014-12-15",
                     EndCustomer = endCustomer,
