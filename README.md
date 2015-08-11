@@ -28,6 +28,9 @@ Dependencies
 Releases
 --------------------
 
+##Release 1.0.4:
+- New ShipmentOrder;
+
 ##Release 1.0.3:
 - Log path issue corrected;
 
