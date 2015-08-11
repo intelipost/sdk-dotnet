@@ -10,37 +10,37 @@ namespace Intelipost.API.Model
     public class EndCustomer
     {
         /// <summary>
-        /// Largura da caixa ou envelope.
+        /// Primeiro nome.
         /// </summary>
         [JsonProperty("first_name")]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Ultimo nome.
         /// </summary>
         [JsonProperty("last_name")]
         public string LastName { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Email.
         /// </summary>
         [JsonProperty("email")]
         public string Email { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Telefone.
         /// </summary>
         [JsonProperty("phone")]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Celular.
         /// </summary>
         [JsonProperty("cellphone")]
         public string Cellphone { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Flag para identificar se o cliente final é uma empresa ou não.
         /// </summary>
         [JsonProperty("is_company")]
         public bool IsCompany { get; set; }
@@ -59,26 +59,26 @@ namespace Intelipost.API.Model
 
         
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Endereço de entrega.
         /// </summary>
         [JsonProperty("shipping_address")]
         public string ShippingAddress { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Numero do endereço de entrega.
         /// </summary>
         [JsonProperty("shipping_number")]
         public string ShippingNumber { get; set; }
 
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Informações adicionais.
         /// </summary>
         [JsonProperty("shipping_additional")]
         public string ShippingAdditional { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Ponto de referencia.
         /// </summary>
         [JsonProperty("shipping_reference")]
         public string ShippingReference { get; set; }
@@ -90,25 +90,25 @@ namespace Intelipost.API.Model
         public string ShippingQuarter { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Cidade de entrega.
         /// </summary>
         [JsonProperty("shipping_city")]
         public string ShippingCity { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Estado de entrega.
         /// </summary>
         [JsonProperty("shipping_state")]
         public string ShippingState { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// CEP de entrega.
         /// </summary>
         [JsonProperty("shipping_zip_code")]
         public string ShippingZipCode { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Pais de entrega.
         /// </summary>
         [JsonProperty("shipping_country")]
         public string ShippingCountry { get; set; }

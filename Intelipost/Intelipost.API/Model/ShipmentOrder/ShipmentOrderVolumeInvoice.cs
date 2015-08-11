@@ -10,44 +10,44 @@ namespace Intelipost.API.Model
     public class ShipmentOrderVolumeInvoice
     {
         /// <summary>
-        /// Largura da caixa ou envelope.
+        /// Serie.
         /// </summary>
         [JsonProperty("invoice_series")]
         public string InvoiceSeries { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Numero da nota fiscal.
         /// </summary>
         [JsonProperty("invoice_number")]
         public string InvoiveNumber { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Chave.
         /// </summary>
         [JsonProperty("invoice_key")]
         public string InvoiceKey { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Data da nota fiscal.
         /// </summary>
         [JsonProperty("invoice_date")]
         public string InvoiceDate { get; set; }
 
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Valor total da nota fiscal.
         /// </summary>
         [JsonProperty("invoice_total_value")]
         public string InvoiceTotalValue { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Valor do produto.
         /// </summary>
         [JsonProperty("invoice_products_value")]
         public string InvoiceProductsValue { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// CFOP
         /// </summary>
         [JsonProperty("invoice_cfop")]
         public string InvoiceCfop { get; set; }

@@ -10,19 +10,19 @@ namespace Intelipost.API.Model
     public class ShipmentOrderVolumeArray
     {
         /// <summary>
-        /// Largura da caixa ou envelope.
+        /// Numero do volume
         /// </summary>
         [JsonProperty("shipment_order_volume_number")]
         public int ShipmentOrderVolumeNumber { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Largura da caixa ou envelope.
         /// </summary>
         [JsonProperty("width")]
         public double Width { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Peso da caixa ou envelope.
         /// </summary>
         [JsonProperty("weight")]
         public double Weight { get; set; }
@@ -34,32 +34,31 @@ namespace Intelipost.API.Model
         public double Height { get; set; }
 
         /// <summary>
-        /// Altura da caixa ou envelope.
+        /// Comprimento da caixa ou envelope.
         /// </summary>
         [JsonProperty("length")]
         public double Length { get; set; }
 
-
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Tipo de produto.
         /// </summary>
         [JsonProperty("products_nature")]
         public string ProductsNature { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Quantidade de produtos.
         /// </summary>
         [JsonProperty("products_quantity")]
         public int ProductsQuantity { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// ICMS
         /// </summary>
         [JsonProperty("is_icms_exempt")]
         public bool IsIcmsExempt { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Código de rastreamento.
         /// </summary>
         [JsonProperty("tracking_code")]
         public string trackingCode { get; set; }
@@ -71,7 +70,7 @@ namespace Intelipost.API.Model
         public string VolumeTypeCode { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Dados da nota fiscal.
         /// </summary>
         [JsonProperty("shipment_order_volume_invoice")]
         public ShipmentOrderVolumeInvoice ShipmentOrderVolumeInvoice { get; set; }
