@@ -52,6 +52,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             using (var streamWriter = new StreamWriter(HttpWebRequest.GetRequestStream()))
             {
                 streamWriter.Write(JsonConvert.SerializeObject(request.Content));
+                
             }
         }
 
@@ -64,7 +65,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             if (HttpWebResponse == null) return string.Empty;
 
             using (var streamReader = new StreamReader(HttpWebResponse.GetResponseStream()))
-            {
+            {   
                 return streamReader.ReadToEnd();
             }
         }
@@ -97,7 +98,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
                 }
 
                 HttpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse();
-
+                
                 responseData = JsonConvert.DeserializeObject<Response<T>>(ReadResponse());
             }
             catch (Exception ex)

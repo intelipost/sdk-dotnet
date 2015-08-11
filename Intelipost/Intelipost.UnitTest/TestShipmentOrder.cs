@@ -106,12 +106,10 @@ namespace Intelipost.UnitTest
                     InvoiceProductsValue = "39.99",
                     InvoiceCfop = "2890"
                 },
-
             };
            
 
             var volumeArrayList = new List<ShipmentOrderVolumeArray>();
-
             volumeArrayList.Add(volumeArray1);
             volumeArrayList.Add(volumeArray2);
 
@@ -120,7 +118,7 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 2,
-                    OrderNumber = "pd0020",
+                    OrderNumber = "pd0110",
                     QuoteId = 291555,
                     estimated_delivery_date = "2014-12-15",
                     EndCustomer = endCustomer,
