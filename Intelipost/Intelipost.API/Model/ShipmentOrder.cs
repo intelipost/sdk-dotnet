@@ -58,7 +58,7 @@ namespace Intelipost.API.Model
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
         /// </summary>
         [JsonProperty("estimated_delivery_date")]
-        public string estimated_delivery_date { get; set; }
+        public DateTime? EstimatedDeliveryDate { get; set; }
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
@@ -123,7 +123,7 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("delivered_date")]
         [JsonConverter(typeof(TimestampToDateTime))]
-        public DateTime DeliveredDate { get; set; }
+        public DateTime? DeliveredDate { get; set; }
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
