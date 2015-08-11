@@ -2,12 +2,14 @@
 using Intelipost.API.Utilities;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-
+using Intelipost.API.Infrastructure.TimestampToDateTime;
+using Newtonsoft.Json.Converters;
 namespace Intelipost.API.Model
 {
     /// <summary>
     /// Entidade respectiva ao volume da encomenda.
     /// </summary>
+    
     public class ShipmentOrder
     {
         /// <summary>
@@ -80,19 +82,23 @@ namespace Intelipost.API.Model
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
         /// </summary>
         [JsonProperty("created")]
-        public string Created { get; set; }
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime Created { get; set; }
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
         /// </summary>
         [JsonProperty("created_iso")]
-        public string CreatedIso { get; set; }
+        public DateTime CreatedIso { get; set; }
+        
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
         /// </summary>
         [JsonProperty("modified")]
-        public string Modified { get; set; }
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime Modified { get; set; }
+        
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
@@ -101,7 +107,7 @@ namespace Intelipost.API.Model
         public string ModifiedIso { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Informações do consumidor
         /// </summary>
         [JsonProperty("end_customer")]
         public EndCustomer EndCustomer { get; set; }
@@ -111,12 +117,13 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("shipment_order_volume_state")]
         public string ShipmentOrderVolumeState { get; set; }
-
+        
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
         /// </summary>
         [JsonProperty("delivered_date")]
-        public string DeliveredDate { get; set; }
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime DeliveredDate { get; set; }
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
@@ -128,6 +135,18 @@ namespace Intelipost.API.Model
         {
             EndCustomer = new Model.EndCustomer();
             ShipmentOrderVolumeArray = new List<Model.ShipmentOrderVolumeArray>();
+        }
+        public bool ShouldSerializeCreated()
+        {
+            return (Created != new DateTime());
+        }
+        public bool ShouldSerializeCreatedIso()
+        {
+            return (CreatedIso != new DateTime());
+        }
+        public bool ShouldSerializeDeliveredDate()
+        {
+            return (DeliveredDate != new DateTime());
         }
     }
 }

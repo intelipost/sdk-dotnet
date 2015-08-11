@@ -34,9 +34,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json7\Net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +53,7 @@
     <Compile Include="Business\Quote.cs" />
     <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
+    <Compile Include="Infrastructure\CustomConverter\TimestampToDateTime.cs" />
     <Compile Include="Infrastructure\JsonRequest\Request.cs" />
     <Compile Include="Infrastructure\Log\Logger.cs" />
     <Compile Include="Model\DeliveryOption.cs" />
