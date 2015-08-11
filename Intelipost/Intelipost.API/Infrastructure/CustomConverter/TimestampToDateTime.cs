@@ -27,7 +27,7 @@ namespace Intelipost.API.Infrastructure.TimestampToDateTime
                 return date;
             }
             else if (reader.TokenType == JsonToken.Null) {                
-                return new DateTime();
+                return null;
             }
             else
             {
