@@ -70,7 +70,7 @@ namespace Intelipost.UnitTest
                 ProductsNature = "beverages",
                 ProductsQuantity = 2,
                 IsIcmsExempt = false,
-                tranckingCode = "SW123456789BR",
+                trackingCode = "SW123456789BR",
                 VolumeTypeCode = "box",
                 ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice() {
                     InvoiceSeries = "1",
@@ -94,7 +94,7 @@ namespace Intelipost.UnitTest
                 ProductsNature = "beverages",
                 ProductsQuantity = 2,
                 IsIcmsExempt = false,
-                tranckingCode = "SW123456789BR",
+                trackingCode = "SW123456789BR",
                 VolumeTypeCode = "box",
                 ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice()
                 {
@@ -117,9 +117,9 @@ namespace Intelipost.UnitTest
             {
                 Content = new ShipmentOrder()
                 {
-                    DeliveryMethodId = 2,
-                    OrderNumber = "pd0110",
-                    QuoteId = 291555,
+                    DeliveryMethodId = 1,
+                    OrderNumber = "pd0002",
+                    QuoteId = 296724,
                     estimated_delivery_date = "2014-12-15",
                     EndCustomer = endCustomer,
                     ShipmentOrderVolumeArray = volumeArrayList

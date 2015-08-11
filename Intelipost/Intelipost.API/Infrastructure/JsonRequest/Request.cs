@@ -71,6 +71,26 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         }
 
         /// <summary>
+        /// Faz a leitura da resposta enviada pelo servidor da InteliPost.
+        /// </summary>
+        /// <returns></returns>
+        internal String ReadResponse(WebException wex)
+        {
+            if (wex.Response != null)
+            {
+                using (var errorResponse = (HttpWebResponse)wex.Response)
+                {
+                    using (var reader = new StreamReader(errorResponse.GetResponseStream()))
+                    {
+                        String error = reader.ReadToEnd();
+                        return error;
+                    }
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Faz toda a criação, execução, captura e log de retorno do servidor da InteliPost.
         /// </summary>
         /// <param name="apiKey">Chave da aplicação.</param>
@@ -101,13 +121,13 @@ namespace Intelipost.API.Infrastructure.JsonRequest
                 
                 responseData = JsonConvert.DeserializeObject<Response<T>>(ReadResponse());
             }
-            catch (Exception ex)
+            catch (WebException ex)
             {
+                responseData = JsonConvert.DeserializeObject<Response<T>>(ReadResponse(ex));
                 if (Business.Configure.PublicInstance.Logging)
                 {
-                    new Logger().Insert(String.Format("{0} > RESPONSE ERROR MESSAGE: {1}", DateTime.Now, ex.Message));
+                    new Logger().Insert(String.Format("{0} > RESPONSE ERROR MESSAGE: {1}", DateTime.Now,ex.Message + " >> " + responseData.Messages[0].Text));
                 }
-
                 throw ex;
             }
 

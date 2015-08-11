@@ -62,7 +62,7 @@ namespace Intelipost.API.Model
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
         /// </summary>
         [JsonProperty("tracking_code")]
-        public string tranckingCode { get; set; }
+        public string trackingCode { get; set; }
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
