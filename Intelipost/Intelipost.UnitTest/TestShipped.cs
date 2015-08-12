@@ -50,7 +50,6 @@ namespace Intelipost.UnitTest
             try
             {
                 var modelResponse = new API.Shipped().RequestShipped(modelRequest);
-
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)

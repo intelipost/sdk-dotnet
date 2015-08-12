@@ -1,6 +1,9 @@
 ﻿using System;
 using Intelipost.API.Utilities;
 using Newtonsoft.Json;
+using Intelipost.API.Model;
+using Intelipost.API.Infrastructure;
+using Intelipost.API.Infrastructure.TimestampToDateTime;
 
 namespace Intelipost.API.Model
 {
@@ -13,7 +16,19 @@ namespace Intelipost.API.Model
         /// Numero do volume
         /// </summary>
         [JsonProperty("shipment_order_volume_number")]
-        public int ShipmentOrderVolumeNumber { get; set; }
+        public string ShipmentOrderVolumeNumber { get; set; }
+
+        /// <summary>
+        /// ID do pedido.
+        /// </summary>
+        [JsonProperty("shipment_order_id")]
+        public int ShipmentOrderId { get; set; }
+
+        /// <summary>
+        /// Estado do volume.
+        /// </summary>
+        [JsonProperty("shipment_order_volume_state")]
+        public string ShipmentOrderVolumeState { get; set; }
 
         /// <summary>
         /// Largura da caixa ou envelope.
@@ -70,6 +85,96 @@ namespace Intelipost.API.Model
         public string VolumeTypeCode { get; set; }
 
         /// <summary>
+        /// Data de criação do Volume (UTC)
+        /// </summary>
+        [JsonProperty("created")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? Created { get; set; }
+
+        /// <summary>
+        /// Data de modificação do Volume (UTC)
+        /// </summary>
+        [JsonProperty("modified")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? Modified { get; set; }
+
+        /// <summary>
+        /// Code de rastreamento da transportadora.
+        /// </summary>
+        [JsonProperty("logistic_provider_tracking_code")]
+        public string LogisticProviderTrackingCode { get; set; }
+
+        /// <summary>
+        /// Data de entrega estimada. (Consumidor)
+        /// </summary>
+        [JsonProperty("estimated_delivery_date")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? EstimatedDeliveryDate { get; set; }
+
+        /// <summary>
+        /// Data de entrega estimada. (Transportadora)
+        /// </summary>
+        [JsonProperty("estimated_delivery_date_lp")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? EstimatedDeliveryDateLp { get; set; }
+
+        /// <summary>
+        /// Estado da pré listade postagem.
+        /// </summary>
+        [JsonProperty("pre_shipment_list_state")]
+        public string PreShipmentListState { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("has_clarify_delivery_fail")]
+        public bool HasClarifyDeliveryFail { get; set; }
+
+        /// <summary>
+        /// Flag ppara identificar se o volume foi entregue com atraso ou não. (Consumidor)
+        /// </summary>
+        [JsonProperty("delivered_late")]
+        public bool DeliveredLate { get; set; }
+
+        /// <summary>
+        /// Flag ppara identificar se o volume foi entregue com atraso ou não. (Transportadora)
+        /// </summary>
+        [JsonProperty("delivered_late_lp")]
+        public bool DeliveredLateLp { get; set; }
+
+        /// <summary>
+        /// Flag ppara identificar se o volume foi entregue.
+        /// </summary>
+        [JsonProperty("delivered")]
+        public bool Delivered { get; set; }
+
+        /// <summary>
+        /// ID da PLP
+        /// </summary>
+        [JsonProperty("pre_shipment_list_id")]
+        public int PreShipmentListId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("logistic_provider_pre_shipment_list_id")]
+        public int LogisticProviderPreShipmentListId { get; set; }
+
+        /// <summary>
+        /// Nome do volume.
+        /// </summary>
+        [JsonProperty("name")]
+        public String Name { get; set; }
+
+        /// <summary>
+        /// Data de despacho do volume.
+        /// </summary>
+        [JsonProperty("shipped_date")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? ShippedDate { get; set; }
+
+
+        /// <summary>
         /// Dados da nota fiscal.
         /// </summary>
         [JsonProperty("shipment_order_volume_invoice")]
@@ -79,7 +184,13 @@ namespace Intelipost.API.Model
         {
             ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice();
         }
-        
-        
+        public bool ShouldSerializeModified()
+        {
+            return (Modified != new DateTime());
+        }
+        public bool ShouldSerializeCreated()
+        {
+            return (Created != new DateTime());
+        }
     }
 }

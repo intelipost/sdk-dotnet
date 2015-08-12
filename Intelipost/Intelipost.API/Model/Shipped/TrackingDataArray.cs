@@ -20,6 +20,5 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("tracking_code")]
         public string TrackingCode { get; set; }
-       
     }
 }
