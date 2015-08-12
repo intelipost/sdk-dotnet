@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestConfigure.cs" />
     <Compile Include="TestGetLabel.cs" />
+    <Compile Include="TestShipped.cs" />
     <Compile Include="TestReadyForShipment.cs" />
     <Compile Include="TestQuote.cs" />
     <Compile Include="TestShipmentOrder.cs" />
