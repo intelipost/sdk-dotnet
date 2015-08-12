@@ -28,11 +28,8 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null)
         {
             HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action).Replace("//", "/").Replace(":/","://"));
-            if (method.ToUpper() == "POST")
-            {
                 HttpWebRequest.Accept = "application/json";
                 HttpWebRequest.ContentType = "application/json";
-            }
             HttpWebRequest.Headers.Add("api_key", apiKey);
             HttpWebRequest.Headers.Add("charset", "UTF-8");
             HttpWebRequest.Headers.Add(".NetVersion", Environment.Version.ToString());
@@ -114,7 +111,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
 
                 if (Business.Configure.PublicInstance.Logging)
                 {
-                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now,((method.ToUpper() == "POST") ? JsonConvert.SerializeObject(request) : url + "/" + action)));
+                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now,((method.ToUpper() == "POST") ? JsonConvert.SerializeObject(request) : url  + action)));
                 }
 
                 HttpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse();

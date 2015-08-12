@@ -15,13 +15,13 @@ namespace Intelipost.API.Model
         public string OrderNumber { get; set; }
 
         /// <summary>
-        /// Numero do pedido.
+        /// Numero do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_number")]
         public string ShipmentOrderVolumeNumber { get; set; }
 
         /// <summary>
-        /// Numero do pedido.
+        /// Url da etiqueta.
         /// </summary>
         [JsonProperty("label_url")]
         public string labelUrl { get; set; }

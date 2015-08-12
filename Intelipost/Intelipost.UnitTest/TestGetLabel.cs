@@ -38,13 +38,13 @@ namespace Intelipost.UnitTest
             {
                 Content = new ReadyForShipment()
                 {
-                    OrderNumber = ""
+                    OrderNumber = "pd0001"
                 }
             };
 
             try
             {
-                var modelResponse = new API.GetLabel().RequestGetLabel("pd0009","1");                
+                var modelResponse = new API.GetLabel().RequestGetLabel("pd0001","20");                
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)

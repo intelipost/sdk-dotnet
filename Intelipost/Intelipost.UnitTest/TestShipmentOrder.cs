@@ -118,9 +118,9 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "pd0002",
+                    OrderNumber = "pd0008",
                     QuoteId = 296724,
-                    estimated_delivery_date = "2014-12-15",
+                    EstimatedDeliveryDate = new DateTime(2015,08,20),
                     EndCustomer = endCustomer,
                     ShipmentOrderVolumeArray = volumeArrayList
                 }
@@ -129,7 +129,6 @@ namespace Intelipost.UnitTest
             try
             {
                 var modelResponse = new API.ShipmentOrder().RequestNewShipmentOrder(modelRequest);
-
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)
