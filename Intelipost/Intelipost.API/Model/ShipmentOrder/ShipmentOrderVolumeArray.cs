@@ -74,7 +74,7 @@ namespace Intelipost.API.Model
         public bool IsIcmsExempt { get; set; }
 
         /// <summary>
-        /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
+        /// Tipo do volume(BOX, ENVELOPE)
         /// </summary>
         [JsonProperty("volume_type_code")]
         public string VolumeTypeCode { get; set; }
@@ -114,25 +114,25 @@ namespace Intelipost.API.Model
         public DateTime? EstimatedDeliveryDateLp { get; set; }
 
         /// <summary>
-        /// Estado da pré listade postagem.
+        /// Estado da pré lista de postagem.
         /// </summary>
         [JsonProperty("pre_shipment_list_state")]
         public string PreShipmentListState { get; set; }
 
         /// <summary>
-        /// 
+        /// Averiguar falha na entrega.
         /// </summary>
         [JsonProperty("has_clarify_delivery_fail")]
         public bool HasClarifyDeliveryFail { get; set; }
 
         /// <summary>
-        /// Flag ppara identificar se o volume foi entregue com atraso ou não. (Consumidor)
+        /// Flag para identificar se o volume foi entregue com atraso ou não. (Consumidor)
         /// </summary>
         [JsonProperty("delivered_late")]
         public bool DeliveredLate { get; set; }
 
         /// <summary>
-        /// Flag ppara identificar se o volume foi entregue com atraso ou não. (Transportadora)
+        /// Flag para identificar se o volume foi entregue com atraso ou não. (Transportadora)
         /// </summary>
         [JsonProperty("delivered_late_lp")]
         public bool DeliveredLateLp { get; set; }
@@ -150,7 +150,7 @@ namespace Intelipost.API.Model
         public int? PreShipmentListId { get; set; }
 
         /// <summary>
-        /// 
+        /// ID da pré lista de postagem.
         /// </summary>
         [JsonProperty("logistic_provider_pre_shipment_list_id")]
         public int? LogisticProviderPreShipmentListId { get; set; }
@@ -169,7 +169,7 @@ namespace Intelipost.API.Model
         public DateTime? ShippedDate { get; set; }
 
         /// <summary>
-        /// Nome do volume.
+        /// Estado atual do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_state_localized")]
         public string ShipmentOrderVolumeStateLocalized { get; set; }
@@ -188,7 +188,7 @@ namespace Intelipost.API.Model
         public int ShipmentOrderVolumeId { get; set; }
 
         /// <summary>
-        /// Id do volume.
+        /// Historico do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_state_history_array")]
         public List<ShipmentOrderVolumeStateHistoryArray> ShipmentOrderVolumeStateHistoryArray { get; set; }

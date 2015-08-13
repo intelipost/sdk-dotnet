@@ -48,7 +48,7 @@ namespace Intelipost.API.Model
         public string EsprinterMessage { get; set; }
 
         /// <summary>
-        /// Estado do volume (transportadora).
+        /// Estado do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_state_localized")]
         public string ShipmentOrderVolumeStateLocalized { get; set; }

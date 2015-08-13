@@ -96,16 +96,22 @@ namespace Intelipost.API.Model
         public string ShippingCity { get; set; }
 
         /// <summary>
+        /// CEP de entrega.
+        /// </summary>
+        [JsonProperty("shipping_zip_code")]
+        public string ShippingZipCode { get; set; }
+
+        /// <summary>
         /// Estado de entrega.
         /// </summary>
         [JsonProperty("shipping_state")]
         public string ShippingState { get; set; }
 
         /// <summary>
-        /// CEP de entrega.
+        /// Estado de entrega.
         /// </summary>
-        [JsonProperty("shipping_zip_code")]
-        public string ShippingZipCode { get; set; }
+        [JsonProperty("shipping_state_code")]
+        public string ShippingStateCode { get; set; }
 
         /// <summary>
         /// Pais de entrega.

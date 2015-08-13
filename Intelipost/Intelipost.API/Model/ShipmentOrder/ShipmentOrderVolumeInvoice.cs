@@ -1,6 +1,7 @@
 ﻿using System;
 using Intelipost.API.Utilities;
 using Newtonsoft.Json;
+using Intelipost.API.Infrastructure.TimestampToDateTime;
 
 namespace Intelipost.API.Model
 {
@@ -10,7 +11,19 @@ namespace Intelipost.API.Model
     public class ShipmentOrderVolumeInvoice
     {
         /// <summary>
-        /// Serie.
+        /// Numero do volume.
+        /// </summary>
+        [JsonProperty("shipment_order_volume_number")]
+        public string ShipmentOrderVolumeNumber { get; set; }
+
+        /// <summary>
+        /// ID do volume.
+        /// </summary>
+        [JsonProperty("shipment_order_volume_id")]
+        public int ShipmentOrderVolumeId { get; set; }
+
+        /// <summary>
+        /// Serie da nota fiscal.
         /// </summary>
         [JsonProperty("invoice_series")]
         public string InvoiceSeries { get; set; }
@@ -31,7 +44,8 @@ namespace Intelipost.API.Model
         /// Data da nota fiscal.
         /// </summary>
         [JsonProperty("invoice_date")]
-        public string InvoiceDate { get; set; }
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? InvoiceDate { get; set; }
 
 
         /// <summary>
@@ -51,5 +65,10 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("invoice_cfop")]
         public string InvoiceCfop { get; set; }
+
+        public bool ShouldSerializeInvoiceDate()
+        {
+            return (InvoiceDate != new DateTime());
+        }
     }
 }

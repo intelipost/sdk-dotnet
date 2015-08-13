@@ -76,7 +76,7 @@ namespace Intelipost.UnitTest
                     InvoiceSeries = "1",
                     InvoiveNumber = "1000",
                     InvoiceKey = "41140502834982004563550010000084111000132317",
-                    InvoiceDate = "12-03-14",
+                    InvoiceDate = new DateTime(2015,08,20),
                     InvoiceTotalValue = "45.99",
                     InvoiceProductsValue = "39.99",
                     InvoiceCfop = "2890"
@@ -101,7 +101,7 @@ namespace Intelipost.UnitTest
                     InvoiceSeries = "1",
                     InvoiveNumber = "1000",
                     InvoiceKey = "41140502834982004563550010000084111000132317",
-                    InvoiceDate = "12-03-14",
+                    InvoiceDate = new DateTime(2015, 08, 20),
                     InvoiceTotalValue = "45.99",
                     InvoiceProductsValue = "39.99",
                     InvoiceCfop = "2890"
@@ -118,7 +118,7 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "pd00016",
+                    OrderNumber = "pd00020",
                     QuoteId = 296724,
                     EstimatedDeliveryDate = new DateTime(2015,08,20),
                     EndCustomer = endCustomer,
