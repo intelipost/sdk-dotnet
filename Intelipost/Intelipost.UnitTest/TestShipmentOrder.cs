@@ -62,7 +62,7 @@ namespace Intelipost.UnitTest
 
             var volumeArray1 = new ShipmentOrderVolumeArray()
             {
-                ShipmentOrderVolumeNumber = 1,
+                ShipmentOrderVolumeNumber = "1",
                 Weight = 10.2,
                 Width = 10.2,
                 Height = 10.2,
@@ -70,7 +70,7 @@ namespace Intelipost.UnitTest
                 ProductsNature = "beverages",
                 ProductsQuantity = 2,
                 IsIcmsExempt = false,
-                trackingCode = "SW123456789BR",
+                TrackingCode = "SW123456789BR",
                 VolumeTypeCode = "box",
                 ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice() {
                     InvoiceSeries = "1",
@@ -86,7 +86,7 @@ namespace Intelipost.UnitTest
 
             var volumeArray2 = new ShipmentOrderVolumeArray()
             {
-                ShipmentOrderVolumeNumber = 2,
+                ShipmentOrderVolumeNumber = "2",
                 Weight = 10.2,
                 Width = 10.2,
                 Height = 10.2,
@@ -94,7 +94,7 @@ namespace Intelipost.UnitTest
                 ProductsNature = "beverages",
                 ProductsQuantity = 2,
                 IsIcmsExempt = false,
-                trackingCode = "SW123456789BR",
+                TrackingCode = "SW123456789BR",
                 VolumeTypeCode = "box",
                 ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice()
                 {
@@ -118,7 +118,7 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "pd0008",
+                    OrderNumber = "pd00016",
                     QuoteId = 296724,
                     EstimatedDeliveryDate = new DateTime(2015,08,20),
                     EndCustomer = endCustomer,

@@ -34,17 +34,9 @@ namespace Intelipost.UnitTest
         public void TestRequest()
         {
             new TestConfigure().TestInitialize();
-            var modelRequest = new Request<ReadyForShipment>()
-            {
-                Content = new ReadyForShipment()
-                {
-                    OrderNumber = "pd0001"
-                }
-            };
-
             try
             {
-                var modelResponse = new API.GetLabel().RequestGetLabel("pd0001","20");                
+                var modelResponse = new API.GetLabel().RequestGetLabel("pd0001","20");      
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)
