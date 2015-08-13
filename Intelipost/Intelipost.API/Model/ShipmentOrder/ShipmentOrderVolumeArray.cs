@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Intelipost.API.Model;
 using Intelipost.API.Infrastructure;
 using Intelipost.API.Infrastructure.TimestampToDateTime;
+using System.Collections.Generic;
 
 namespace Intelipost.API.Model
 {
@@ -71,12 +72,6 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("is_icms_exempt")]
         public bool IsIcmsExempt { get; set; }
-
-        /// <summary>
-        /// Código de rastreamento.
-        /// </summary>
-        [JsonProperty("tracking_code")]
-        public string trackingCode { get; set; }
 
         /// <summary>
         /// Comprimento da caixa (não é necessária para volumes do tipo ENVELOPE).
@@ -152,19 +147,19 @@ namespace Intelipost.API.Model
         /// ID da PLP
         /// </summary>
         [JsonProperty("pre_shipment_list_id")]
-        public int PreShipmentListId { get; set; }
+        public int? PreShipmentListId { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [JsonProperty("logistic_provider_pre_shipment_list_id")]
-        public int LogisticProviderPreShipmentListId { get; set; }
+        public int? LogisticProviderPreShipmentListId { get; set; }
 
         /// <summary>
         /// Nome do volume.
         /// </summary>
         [JsonProperty("name")]
-        public String Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Data de despacho do volume.
@@ -173,6 +168,36 @@ namespace Intelipost.API.Model
         [JsonConverter(typeof(TimestampToDateTime))]
         public DateTime? ShippedDate { get; set; }
 
+        /// <summary>
+        /// Nome do volume.
+        /// </summary>
+        [JsonProperty("shipment_order_volume_state_localized")]
+        public string ShipmentOrderVolumeStateLocalized { get; set; }
+
+        /// <summary>
+        /// Data de despacho do volume.
+        /// </summary>
+        [JsonProperty("delivered_date")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? DeliveredDate { get; set; }
+
+        /// <summary>
+        /// Id do volume.
+        /// </summary>
+        [JsonProperty("shipment_order_volume_id")]
+        public int ShipmentOrderVolumeId { get; set; }
+
+        /// <summary>
+        /// Id do volume.
+        /// </summary>
+        [JsonProperty("shipment_order_volume_state_history_array")]
+        public List<ShipmentOrderVolumeStateHistoryArray> ShipmentOrderVolumeStateHistoryArray { get; set; }
+
+        /// <summary>
+        /// Código de rastreamento.
+        /// </summary>
+        [JsonProperty("tracking_code")]
+        public string TrackingCode { get; set; }
 
         /// <summary>
         /// Dados da nota fiscal.
@@ -183,6 +208,7 @@ namespace Intelipost.API.Model
         public ShipmentOrderVolumeArray()
         {
             ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice();
+            ShipmentOrderVolumeStateHistoryArray = new List<ShipmentOrderVolumeStateHistoryArray>();
         }
         public bool ShouldSerializeModified()
         {
@@ -192,5 +218,22 @@ namespace Intelipost.API.Model
         {
             return (Created != new DateTime());
         }
+        public bool ShouldSerializeShippedDate()
+        {
+            return (ShippedDate != new DateTime());
+        }
+        public bool ShouldSerializeDeliveredDate()
+        {
+            return (DeliveredDate != new DateTime());
+        }
+        public bool ShouldSerializeShipmentOrderVolumeStateHistoryArray()
+        {
+            return (ShipmentOrderVolumeStateHistoryArray.Count > 0);
+        }
+        public bool ShouldSerializeShipmentOrderVolumeInvoice()
+        {
+            return (ShipmentOrderVolumeInvoice != new ShipmentOrderVolumeInvoice());
+        }
+
     }
 }
