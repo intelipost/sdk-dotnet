@@ -48,16 +48,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Configure.cs" />
+    <Compile Include="Business\GetShipmentOrder.cs" />
     <Compile Include="Business\GetLabel.cs" />
     <Compile Include="Business\Shipped.cs" />
     <Compile Include="Business\ReadyForShipment.cs" />
     <Compile Include="Business\Quote.cs" />
     <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
+    <Compile Include="GetShipmentOder.cs" />
     <Compile Include="Infrastructure\CustomConverter\TimestampToDateTime.cs" />
     <Compile Include="Infrastructure\JsonRequest\Request.cs" />
     <Compile Include="Infrastructure\Log\Logger.cs" />
     <Compile Include="Model\Quote\DeliveryOption.cs" />
+    <Compile Include="Model\ShipmentOrder\GetShipmentOrder\GetShipmentOrder.cs" />
+    <Compile Include="Model\ShipmentOrder\ShipmentOrderVolumeStateHistoryArray.cs" />
     <Compile Include="Model\Shipped\TrackingDataArray.cs" />
     <Compile Include="Model\Shipped\Shipped.cs" />
     <Compile Include="Model\ShipmentOrder\EndCustomer.cs" />
