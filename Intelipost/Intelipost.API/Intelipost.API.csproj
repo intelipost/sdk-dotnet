@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Configure.cs" />
+    <Compile Include="Business\AutoComplete.cs" />
     <Compile Include="Business\GetShipmentOrder.cs" />
     <Compile Include="Business\GetLabel.cs" />
     <Compile Include="Business\QuoteByProduct.cs" />
@@ -56,10 +57,12 @@
     <Compile Include="Business\Quote.cs" />
     <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
+    <Compile Include="AutoComplete.cs" />
     <Compile Include="GetShipmentOder.cs" />
     <Compile Include="Infrastructure\CustomConverter\TimestampToDateTime.cs" />
     <Compile Include="Infrastructure\JsonRequest\Request.cs" />
     <Compile Include="Infrastructure\Log\Logger.cs" />
+    <Compile Include="Model\AutoComplete\AutoComplete.cs" />
     <Compile Include="Model\QuoteByProduct\Products.cs" />
     <Compile Include="Model\Quote\DeliveryOption.cs" />
     <Compile Include="Model\Quote\AdditionalInformation.cs" />

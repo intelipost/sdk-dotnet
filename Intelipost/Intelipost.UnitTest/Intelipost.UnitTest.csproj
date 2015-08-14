@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestConfigure.cs" />
+    <Compile Include="TestAutoComplete.cs" />
     <Compile Include="TestGetShipmentOrder.cs" />
     <Compile Include="TestGetLabel.cs" />
     <Compile Include="TestQuoteByProduct.cs" />
