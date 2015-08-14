@@ -62,6 +62,7 @@ namespace Intelipost.UnitTest
 
             volumes.Add(volume1);
             volumes.Add(volume2);
+            AddtionalInformation ad = new AddtionalInformation();
 
             var modelRequest = new Request<Quote>()
             {
@@ -69,7 +70,20 @@ namespace Intelipost.UnitTest
                 {
                     OriginZipCode = "01001-000",
                     DestinationZipCode = "20000-000",
-                    Volumes = volumes
+                    Volumes = volumes,
+                    AddtionalInformation = new AddtionalInformation() {
+                        FreeShipping = false,
+                        ExtraCostsAbsolute = 0,
+                        ExtraCostsPercentage = 0,
+                        LeadTimeBussinessDays = 0,
+                        DeliveryMethodIds = new int[] {1,2}               
+                    },     
+                    Identification = new Identification() {
+                        Url = "www.teste.com",
+                        PageName = "Page Test",
+                        ip = "192.168.0.1",
+                        Session = "123456789"
+                    }             
                 }
             };
 
