@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace Intelipost.UnitTest
 {
     /// <summary>
-    /// TestQuote é destinado a fazer uma cotação teste e verificar se o seu retorno está correto.
+    /// TestGetShipmentOrder é destinado a fazer uma requisição teste e verificar se o seu retorno está correto.
     /// </summary>
     [TestClass]
     public class TestGetShipmentOrder
@@ -28,7 +28,7 @@ namespace Intelipost.UnitTest
         }
 
         /// <summary>
-        /// TestRequest é destinado a requisição teste para a cotação.
+        /// TestRequest é destinado a requisição teste para a validar se o retorno está correto.
         /// </summary>
         [TestMethod]
         public void TestRequest()

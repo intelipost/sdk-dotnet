@@ -3,7 +3,7 @@
 namespace Intelipost.API
 {
     /// <summary>
-    /// Classe destinada a expor as requisições para a cotação.
+    /// Classe destinada a expor os métodos de envio ativos para o cliente.
     /// </summary>
     public class Info
     {

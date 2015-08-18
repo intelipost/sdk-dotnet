@@ -32,7 +32,7 @@ namespace Intelipost.UnitTest
         }
 
         /// <summary>
-        /// TestRequest é destinado a requisição teste para a cotação.
+        /// TestRequest é destinado a requisição teste para a validar se o retorno está correto.
         /// </summary>
         [TestMethod]
         public void TestRequest()

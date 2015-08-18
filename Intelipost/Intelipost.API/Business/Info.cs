@@ -3,7 +3,7 @@
 namespace Intelipost.API.Business
 {
     /// <summary>
-    /// Classe destinada a tratar todas as regras de negócios, aplicadas a API, da cotação.
+    /// Classe destinada a tratar todas as regras de negócios, aplicadas a API.
     /// </summary>
     internal class Info
     {

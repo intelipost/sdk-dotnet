@@ -3,15 +3,15 @@
 namespace Intelipost.API
 {
     /// <summary>
-    /// Classe destinada a expor as requisições para a cotação.
+    /// Classe destinada a criação de um pedido de envio.
     /// </summary>
     public class ShipmentOrder
     {
         /// <summary>
-        /// Execute a requisição de Cotação.
+        /// Execute a criação de um pedido de envio
         /// </summary>
-        /// <param name="request">Entidade Request devidamente preenchida para a cotação.</param>
-        /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
+        /// <param name="request">Entidade Request devidamente preenchida para a requisição.</param>
+        /// <returns>Retorna um pedido de envio preenchido ou mensagem de erro.</returns>
         public Response<Model.ShipmentOrder> RequestNewShipmentOrder(Request<Model.ShipmentOrder> request)
         {
             return new Business.ShipmentOrder().RequestNewShipmentOrder(request);

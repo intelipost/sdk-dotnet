@@ -3,15 +3,14 @@
 namespace Intelipost.API
 {
     /// <summary>
-    /// Classe destinada a expor as requisições para a cotação.
+    /// Classe destinada a expor as informações do pedido.
     /// </summary>
     public class GetShipmentOrder
     {
         /// <summary>
-        /// Execute a requisição de Cotação.
+        /// Requisição para obter as informações de um pedido.
         /// </summary>
-        /// <param name="request">Entidade Request devidamente preenchida para a cotação.</param>
-        /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
+        /// <returns>Retorna as informações do pedido informado.</returns>
         public Response<Model.GetShipmentOrder> RequestGetShipmentOrder(string OrderNumber)
         {
             return new Business.GetShipmentOrder().RequestGetShipmentOrder(OrderNumber);
