@@ -19,7 +19,7 @@ namespace Intelipost.API
 
             if (logging)
             {
-                if (string.IsNullOrEmpty(logPath))
+                if (!string.IsNullOrEmpty(logPath))
                 {
                     Business.Configure.PublicInstance.LogPath = logPath;
                 }

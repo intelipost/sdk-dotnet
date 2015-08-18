@@ -21,11 +21,12 @@ namespace Intelipost.API.Model
         /// O tempo da requisição por parte da InteliPost.
         /// </summary>
         [JsonProperty("time")]
-        public string RequestTime { get; set; }
+        public string Time { get; set; }       
 
         /// <summary>
         /// O tempo da requisição completa.
         /// </summary>
+        [JsonProperty("operation_time")]
         public string OperationTime { get; set; }
 
         /// <summary>

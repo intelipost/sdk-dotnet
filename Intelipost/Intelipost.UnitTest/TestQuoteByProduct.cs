@@ -11,9 +11,9 @@ namespace Intelipost.UnitTest
     /// TestQuote é destinado a fazer uma requisição teste e verificar se o seu retorno está correto.
     /// </summary>
     [TestClass]
-    public class TestQuote
+    public class TestQuoteByProduct
     {
-        public TestQuote()
+        public TestQuoteByProduct()
         {
         }
 
@@ -39,57 +39,54 @@ namespace Intelipost.UnitTest
         {
             new TestConfigure().TestInitialize();
 
-            var volumes = new List<Volume>();
-            var volume1 = new Volume()
-            {
-                CostOfGoods = 15.99,
-                Height = 10,
-                Length = 25,
-                VolumeType = VolumeType.Envelope,
-                Weight = 10,
-                Width = 10
+            Products produto1 = new Products() {
+                Weight = 1,
+                CostOfGoods = 2,
+                Width = 0.1,
+                Height = 0.1,
+                Length = 0.1,
+                Quantity = 1,
+                SkuId = "123",
+                description = "produto 1",
+                CanGroup = false
             };
 
-            var volume2 = new Volume()
+            Products produto2 = new Products()
             {
-                CostOfGoods = 30.99,
-                Height = 10,
-                Length = 25,
-                VolumeType = VolumeType.Box,
-                Weight = 2,
-                Width = 20
+                Weight = 1,
+                CostOfGoods = 2,
+                Width = 0.1,
+                Height = 0.1,
+                Length = 0.1,
+                Quantity = 1,
+                SkuId = "123",
+                description = "produto 1",
+                CanGroup = false
             };
 
-            volumes.Add(volume1);
-            volumes.Add(volume2);
-            AddtionalInformation ad = new AddtionalInformation();
-
+            List<Products> produtos = new List<Products>();
+            produtos.Add(produto1);
+            produtos.Add(produto2);
             var modelRequest = new Request<Quote>()
             {
                 Content = new Quote()
                 {
                     OriginZipCode = "01001-000",
                     DestinationZipCode = "20000-000",
-                    Volumes = volumes,
+                    Products = produtos,
                     AddtionalInformation = new AddtionalInformation() {
                         FreeShipping = false,
                         ExtraCostsAbsolute = 0,
                         ExtraCostsPercentage = 0,
                         LeadTimeBussinessDays = 0,
                         DeliveryMethodIds = new int[] {1,2}               
-                    },     
-                    Identification = new Identification() {
-                        Url = "www.teste.com",
-                        PageName = "Page Test",
-                        ip = "192.168.0.1",
-                        Session = "123456789"
-                    }             
+                    }        
                 }
             };
 
             try
             {
-                var modelResponse = new API.Quote().RequestNewQuote(modelRequest,"fc8e9d156fcfb48fbfe4c66febac48acce84e5af");
+                var modelResponse = new API.QuoteByProduct().RequestNewQuoteByProduct(modelRequest,"fc8e9d156fcfb48fbfe4c66febac48acce84e5af");
 
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }

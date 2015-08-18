@@ -24,17 +24,20 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="url">URL para a requisição.</param>
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
-        internal void CreateRequest(string apiKey, string url, string action, string method)
+        /// <param name="debug_hash">Hash para utilização do modo debug</param>
+        internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null)
         {
-            HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action));
-            HttpWebRequest.Accept = "application/json";
-            HttpWebRequest.ContentType = "application/json";
+            HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action).Replace("//", "/").Replace(":/","://"));
+                HttpWebRequest.Accept = "application/json";
+                HttpWebRequest.ContentType = "application/json";
             HttpWebRequest.Headers.Add("api_key", apiKey);
             HttpWebRequest.Headers.Add("charset", "UTF-8");
             HttpWebRequest.Headers.Add(".NetVersion", Environment.Version.ToString());
             HttpWebRequest.Headers.Add("APIVersion", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);
             HttpWebRequest.AutomaticDecompression = DecompressionMethods.GZip;
             HttpWebRequest.Method = method;
+            if(debug_hash != null)
+                HttpWebRequest.Headers.Add("debug", debug_hash);
         }
 
         /// <summary>
@@ -46,6 +49,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             using (var streamWriter = new StreamWriter(HttpWebRequest.GetRequestStream()))
             {
                 streamWriter.Write(JsonConvert.SerializeObject(request.Content));
+                
             }
         }
 
@@ -58,9 +62,29 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             if (HttpWebResponse == null) return string.Empty;
 
             using (var streamReader = new StreamReader(HttpWebResponse.GetResponseStream()))
-            {
+            {   
                 return streamReader.ReadToEnd();
             }
+        }
+
+        /// <summary>
+        /// Faz a leitura da resposta enviada pelo servidor da InteliPost.
+        /// </summary>
+        /// <returns></returns>
+        internal String ReadResponse(WebException wex)
+        {
+            if (wex.Response != null)
+            {
+                using (var errorResponse = (HttpWebResponse)wex.Response)
+                {
+                    using (var reader = new StreamReader(errorResponse.GetResponseStream()))
+                    {
+                        String error = reader.ReadToEnd();
+                        return error;
+                    }
+                }
+            }
+            return null;
         }
 
         /// <summary>
@@ -72,7 +96,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="method">Método de envio.</param>
         /// <param name="request">Entidade devidamente preenchida.</param>
         /// <returns>Retorna uma Entidade padrão de resposta da InteliPost.</returns>
-        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request)
+        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request, string debug_hash = null)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -81,26 +105,26 @@ namespace Intelipost.API.Infrastructure.JsonRequest
 
             try
             {
-                CreateRequest(apiKey, url, action, method);
-
-                WriteStream(request);
+                CreateRequest(apiKey, url, action, method,debug_hash);
+                if(method.ToUpper() == "POST")
+                    WriteStream(request);
 
                 if (Business.Configure.PublicInstance.Logging)
                 {
-                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now, JsonConvert.SerializeObject(request)));
+                    new Logger().Insert(String.Format("{0} > FULL REQUEST: {1}", DateTime.Now,((method.ToUpper() == "POST") ? JsonConvert.SerializeObject(request) : url  + action)));
                 }
 
                 HttpWebResponse = (HttpWebResponse)HttpWebRequest.GetResponse();
-
+                
                 responseData = JsonConvert.DeserializeObject<Response<T>>(ReadResponse());
             }
-            catch (Exception ex)
+            catch (WebException ex)
             {
+                responseData = JsonConvert.DeserializeObject<Response<T>>(ReadResponse(ex));
                 if (Business.Configure.PublicInstance.Logging)
                 {
-                    new Logger().Insert(String.Format("{0} > RESPONSE ERROR MESSAGE: {1}", DateTime.Now, ex.Message));
+                    new Logger().Insert(String.Format("{0} > RESPONSE ERROR MESSAGE: {1}", DateTime.Now,ex.Message + " >> " + responseData.Messages[0].Text));
                 }
-
                 throw ex;
             }
 
@@ -112,7 +136,6 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             {
                 new Logger().Insert(String.Format("{0} > RESPONSE: {1}", DateTime.Now, JsonConvert.SerializeObject(responseData)));
             }
-
             return responseData;
         }
     }

@@ -23,22 +23,21 @@ Dependencies
 --------------------
 
 - .NETFramework ≥ 4.0
-- Newtonsoft.Json (≥ 6.0.4)
+- Newtonsoft.Json (≥ 7.0.0)
 
 Releases
 --------------------
-
-##Release 1.0.3:
-- Log path issue corrected;
-
-##Release 1.0.2:
-- Correcting Release Notes;
-
-##Release 1.0.1:
-- Correcting folder structure;
 
 ##Release 1.0.0:
 - Configuration
 --- Log can be turn on or off;
 --- If Log on, path need to be pointed;
 - New Quote;
+- New QuoteByProduct;
+- New ShipmentOrder;
+- New GetShipmentOrder;
+- New GetLabel;
+- New Shipped;
+- New ReadyForShipment;
+- New Info;
+- New Autocomplete;

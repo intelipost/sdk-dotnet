@@ -35,3 +35,14 @@ E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTe
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csprojResolveAssemblyReference.cache
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.dll
 E:\BetaSystems\Projetos\GitHub\api-donet\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.pdb
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.UnitTest.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.UnitTest.pdb
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.API.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.API.pdb
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.dll
+C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.pdb

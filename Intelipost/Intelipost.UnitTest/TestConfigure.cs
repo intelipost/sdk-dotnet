@@ -25,9 +25,9 @@ namespace Intelipost.UnitTest
         /// TestInitialize é destinado a inicialização da Configuração, com a API_KEY e com TRUE/FALSO para o Log.
         /// </summary>
         [TestMethod]
-        public void TestIntialize()
+        public void TestInitialize()
         {
-            new Configure().Initialize("c5ceacc445054db3109aca7ef99240bb1e1fa1842d90be22594caeba6d55558e", true, "C:\\InteliPost API Log\\");
+            new Configure().Initialize("bf8a1ca4fbb69a93990dba0442154e1a3efeb36f077db433a56d2fbf137f97e2", true, "C:\\InteliPost API Log\\");
         }
     }
 }

@@ -54,5 +54,11 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("cost_of_goods")]
         public double CostOfGoods { get; set; }
+
+        /// <summary>
+        /// Preço dos produtos presentes neste volume.
+        /// </summary>
+        [JsonProperty("description")]
+        public string description { get; set; }
     }
 }

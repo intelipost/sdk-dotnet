@@ -33,5 +33,31 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("description")]
         public string Description { get; set; }
+
+        /// <summary>
+        /// Nota referente à entrega.
+        /// </summary>
+        [JsonProperty("delivery_note")]
+        public string DeliveryNote { get; set; }
+
+        /// <summary>
+        /// Tipo do método de envio.
+        /// </summary>
+        [JsonProperty("delivery_method_type")]
+        public string DeliveryMethodType { get; set; }
+
+        /// <summary>
+        /// Nome do método de envio
+        /// </summary>
+        [JsonProperty("delivery_method_name")]
+        public string DeliveryMethodName { get; set; }
+
+        /// <summary>
+        /// Nome da transportadora.
+        /// </summary>
+        [JsonProperty("logistic_provider_name")]
+        public string LogisticProviderName { get; set; }
+
+
     }
 }
