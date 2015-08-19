@@ -39,7 +39,6 @@ C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Ne
 C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.dll
 C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.pdb
 C:\Users\user\Documents\GitHub\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\GitHub\Intelipost\api-dotnet\Intelipost\Intelipost.API\obj\Debug\Intelipost.API.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\Intelipost\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Intelipost.API.dll
 C:\Users\user\Documents\GitHub\Intelipost\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Intelipost.API.pdb
 C:\Users\user\Documents\GitHub\Intelipost\api-dotnet\Intelipost\Intelipost.API\bin\Debug\Newtonsoft.Json.dll

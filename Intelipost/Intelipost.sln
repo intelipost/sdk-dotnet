@@ -35,11 +35,11 @@ Global
 		{4991225A-6CF9-4768-B066-16EA00DA60A4} = {21751A4A-1B09-46E4-9923-DE6455B854BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_UseGlobalSettings = True
-		BuildVersion_AssemblyInfoFilename = InteliPost API for .NET projects.
-		BuildVersion_StartDate = 2014/8/10
-		BuildVersion_UpdateFileVersion = True
-		BuildVersion_UpdateAssemblyVersion = True
 		BuildVersion_BuildVersioningStyle = DeltaBaseYear.DayStamp.Increment.Increment
+		BuildVersion_UpdateAssemblyVersion = True
+		BuildVersion_UpdateFileVersion = True
+		BuildVersion_StartDate = 2014/8/10
+		BuildVersion_AssemblyInfoFilename = InteliPost API for .NET projects.
+		BuildVersion_UseGlobalSettings = True
 	EndGlobalSection
 EndGlobal
