@@ -27,12 +27,7 @@ Dependencies
 
 Releases
 --------------------
-
-##Release 1.0.0:
-- Configuration
---- Log can be turn on or off;
---- If Log on, path need to be pointed;
-- New Quote;
+##Release 2.0.0:
 - New QuoteByProduct;
 - New ShipmentOrder;
 - New GetShipmentOrder;
@@ -41,3 +36,18 @@ Releases
 - New ReadyForShipment;
 - New Info;
 - New Autocomplete;
+
+##Release 1.0.3:
+- Log path issue corrected;
+
+##Release 1.0.2:
+- Correcting Release Notes;
+
+##Release 1.0.1:
+- Correcting folder structure;
+
+##Release 1.0.0:
+- Configuration
+--- Log can be turn on or off;
+--- If Log on, path need to be pointed;
+- New Quote;
