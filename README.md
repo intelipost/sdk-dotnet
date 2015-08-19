@@ -6,7 +6,7 @@ Installation
 ------------
 Install using NuGet
 
-https://www.nuget.org/packages/InteliPost.API/
+https://www.nuget.org/packages/api-intelipost/
 
 To install InteliPost API, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console)
 
@@ -23,7 +23,7 @@ Dependencies
 --------------------
 
 - .NETFramework ≥ 4.0
-- Newtonsoft.Json (≥ 7.0.0)
+- Newtonsoft.Json (≥ 7.0.1)
 
 Releases
 --------------------
