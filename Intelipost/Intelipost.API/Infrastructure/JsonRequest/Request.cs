@@ -28,8 +28,8 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null)
         {
             HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action).Replace("//", "/").Replace(":/","://"));
-                HttpWebRequest.Accept = "application/json";
-                HttpWebRequest.ContentType = "application/json";
+            HttpWebRequest.Accept = "application/json";
+            HttpWebRequest.ContentType = "application/json";
             HttpWebRequest.Headers.Add("api_key", apiKey);
             HttpWebRequest.Headers.Add("charset", "UTF-8");
             HttpWebRequest.Headers.Add(".NetVersion", Environment.Version.ToString());
