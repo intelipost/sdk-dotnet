@@ -27,6 +27,9 @@ Dependencies
 
 Releases
 --------------------
+##Release 2.0.1:
+- New Tracking;
+
 ##Release 2.0.0:
 - New QuoteByProduct;
 - New ShipmentOrder;
