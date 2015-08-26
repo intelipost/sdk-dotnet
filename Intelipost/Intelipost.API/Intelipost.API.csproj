@@ -59,6 +59,7 @@
     <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
     <Compile Include="AutoComplete.cs" />
+    <Compile Include="Tracking.cs" />
     <Compile Include="Info.cs" />
     <Compile Include="GetShipmentOder.cs" />
     <Compile Include="Infrastructure\CustomConverter\TimestampToDateTime.cs" />
@@ -86,6 +87,8 @@
     <Compile Include="Model\ShipmentOrder\ShipmentOrderVolumeArray.cs" />
     <Compile Include="Model\ShipmentOrder\ShipmentOrderVolumeInvoice.cs" />
     <Compile Include="Model\Quote\Volume.cs" />
+    <Compile Include="Model\Tracking\History.cs" />
+    <Compile Include="Model\Tracking\Tracking.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GetLabel.cs" />
     <Compile Include="QuoteByProduct.cs" />
@@ -98,6 +101,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

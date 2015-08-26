@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Test Layer", "1 - Test 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intelipost.UnitTest", "Intelipost.UnitTest\Intelipost.UnitTest.csproj", "{4991225A-6CF9-4768-B066-16EA00DA60A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTracking", "TestTracking\TestTracking.csproj", "{46C72389-3486-4A7B-A6DB-28520C3C81F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{4991225A-6CF9-4768-B066-16EA00DA60A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4991225A-6CF9-4768-B066-16EA00DA60A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4991225A-6CF9-4768-B066-16EA00DA60A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C72389-3486-4A7B-A6DB-28520C3C81F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C72389-3486-4A7B-A6DB-28520C3C81F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C72389-3486-4A7B-A6DB-28520C3C81F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C72389-3486-4A7B-A6DB-28520C3C81F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +39,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D27837BD-5067-4C8B-ACBF-51BD8B956737} = {7F7CC6AD-A8F1-4BEF-AFFA-BB07A492A398}
 		{4991225A-6CF9-4768-B066-16EA00DA60A4} = {21751A4A-1B09-46E4-9923-DE6455B854BB}
+		{46C72389-3486-4A7B-A6DB-28520C3C81F1} = {21751A4A-1B09-46E4-9923-DE6455B854BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		BuildVersion_BuildVersioningStyle = DeltaBaseYear.DayStamp.Increment.Increment
