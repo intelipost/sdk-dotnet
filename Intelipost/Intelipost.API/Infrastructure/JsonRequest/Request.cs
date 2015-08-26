@@ -49,7 +49,6 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             using (var streamWriter = new StreamWriter(HttpWebRequest.GetRequestStream()))
             {
                 streamWriter.Write(JsonConvert.SerializeObject(request.Content));
-                
             }
         }
 
