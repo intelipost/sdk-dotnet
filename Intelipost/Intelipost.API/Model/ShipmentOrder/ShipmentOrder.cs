@@ -16,37 +16,37 @@ namespace Intelipost.API.Model
         /// ID da Ordem de Pedido.
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// ID do cliente.
         /// </summary>
         [JsonProperty("client_id")]
-        public int ClientId { get; set; }
+        public int? ClientId { get; set; }
 
         /// <summary>
         /// ID da cotação.
         /// </summary>
         [JsonProperty("quote_id")]
-        public int QuoteId { get; set; }
+        public int? QuoteId { get; set; }
 
         /// <summary>
         /// ID do método de envio escolhido.
         /// </summary>
         [JsonProperty("delivery_method_id")]
-        public int DeliveryMethodId { get; set; }
+        public int? DeliveryMethodId { get; set; }
 
         /// <summary>
         /// Custo de envio para o despachante.
         /// </summary>
         [JsonProperty("provider_shipping_costs")]
-        public double ProviderShippingCosts { get; set; }
+        public double? ProviderShippingCosts { get; set; }
 
         /// <summary>
         /// Custo de envio para o cliente final.
         /// </summary>
         [JsonProperty("customer_shipping_costs")]
-        public double CustomerShippingCosts { get; set; }
+        public double? CustomerShippingCosts { get; set; }
 
         /// <summary>
         /// Numero do Pedido
@@ -80,7 +80,7 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("created")]
         [JsonConverter(typeof(TimestampToDateTime))]
-        public DateTime Created { get; set; }
+        public DateTime? Created { get; set; }
 
         /// <summary>
         /// Data de modificação do pedido (UTC).

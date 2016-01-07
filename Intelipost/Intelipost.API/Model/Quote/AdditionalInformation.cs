@@ -19,7 +19,7 @@ namespace Intelipost.API.Model
         /// Custo extra.
         /// </summary>
         [JsonProperty("extra_costs_absolute")]
-        public double ExtraCostsAbsolute { get; set; }
+        public double? ExtraCostsAbsolute { get; set; }
 
         /// <summary>
         /// Custo extra(%)
@@ -31,7 +31,7 @@ namespace Intelipost.API.Model
         /// Prazo adicional em dias uteis.
         /// </summary>
         [JsonProperty("lead_time_bussiness_days")]
-        public int LeadTimeBussinessDays { get; set; }
+        public int? LeadTimeBussinessDays { get; set; }
 
         /// <summary>
         /// Metodos de envio a serem apresentados.

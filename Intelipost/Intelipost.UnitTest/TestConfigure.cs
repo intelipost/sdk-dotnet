@@ -27,7 +27,7 @@ namespace Intelipost.UnitTest
         [TestMethod]
         public void TestInitialize()
         {
-            new Configure().Initialize("8c9da3f8ecd96acb2aae0cffb47e67d8fc94706a8083238a9e83ac144a4488f2", true, "C:\\InteliPost API Log\\");
+            new Configure().Initialize("api_key", true, "C:\\InteliPost API Log\\");
         }
     }
 }

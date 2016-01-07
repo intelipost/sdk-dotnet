@@ -80,13 +80,13 @@ namespace Intelipost.API.Model
         /// Custo de envio. (Despachante)
         /// </summary>
         [JsonProperty("provider_shipping_costs")]
-        public double ProviderShippingCosts{ get; set; }
+        public double? ProviderShippingCosts{ get; set; }
 
         /// <summary>
         /// ID da Ordem de Pedido
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Lista de volumes.

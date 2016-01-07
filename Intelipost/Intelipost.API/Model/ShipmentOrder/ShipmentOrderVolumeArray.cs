@@ -23,7 +23,7 @@ namespace Intelipost.API.Model
         /// ID do pedido.
         /// </summary>
         [JsonProperty("shipment_order_id")]
-        public int ShipmentOrderId { get; set; }
+        public int? ShipmentOrderId { get; set; }
 
         /// <summary>
         /// Estado do volume.
@@ -35,25 +35,25 @@ namespace Intelipost.API.Model
         /// Largura da caixa ou envelope.
         /// </summary>
         [JsonProperty("width")]
-        public double Width { get; set; }
+        public double? Width { get; set; }
 
         /// <summary>
         /// Peso da caixa ou envelope.
         /// </summary>
         [JsonProperty("weight")]
-        public double Weight { get; set; }
+        public double? Weight { get; set; }
 
         /// <summary>
         /// Altura da caixa ou envelope.
         /// </summary>
         [JsonProperty("height")]
-        public double Height { get; set; }
+        public double? Height { get; set; }
 
         /// <summary>
         /// Comprimento da caixa ou envelope.
         /// </summary>
         [JsonProperty("length")]
-        public double Length { get; set; }
+        public double? Length { get; set; }
 
         /// <summary>
         /// Tipo de produto.
@@ -65,7 +65,7 @@ namespace Intelipost.API.Model
         /// Quantidade de produtos.
         /// </summary>
         [JsonProperty("products_quantity")]
-        public int ProductsQuantity { get; set; }
+        public int? ProductsQuantity { get; set; }
 
         /// <summary>
         /// ICMS
@@ -185,7 +185,7 @@ namespace Intelipost.API.Model
         /// Id do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_id")]
-        public int ShipmentOrderVolumeId { get; set; }
+        public int? ShipmentOrderVolumeId { get; set; }
 
         /// <summary>
         /// Historico do volume.
@@ -232,8 +232,7 @@ namespace Intelipost.API.Model
         }
         public bool ShouldSerializeShipmentOrderVolumeInvoice()
         {
-            return (ShipmentOrderVolumeInvoice != new ShipmentOrderVolumeInvoice());
+            return (ShipmentOrderVolumeInvoice.InvoiceKey != null && ShipmentOrderVolumeInvoice.InvoiceTotalValue != null);
         }
-
     }
 }

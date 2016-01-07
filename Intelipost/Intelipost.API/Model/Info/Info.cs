@@ -12,7 +12,7 @@ namespace Intelipost.API.Model
         /// ID do cliente.
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Nome

@@ -12,7 +12,7 @@ namespace Intelipost.API.Model
         /// ID do método de envio
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         /// <summary>
         /// Nome do método de envio

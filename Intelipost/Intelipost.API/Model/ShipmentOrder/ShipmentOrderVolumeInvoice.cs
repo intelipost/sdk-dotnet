@@ -20,7 +20,7 @@ namespace Intelipost.API.Model
         /// ID do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_id")]
-        public int ShipmentOrderVolumeId { get; set; }
+        public int? ShipmentOrderVolumeId { get; set; }
 
         /// <summary>
         /// Serie da nota fiscal.

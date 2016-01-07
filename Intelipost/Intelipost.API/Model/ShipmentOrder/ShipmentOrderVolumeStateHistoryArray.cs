@@ -14,7 +14,7 @@ namespace Intelipost.API.Model
         /// Id do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_id")]
-        public int ShipmentOrderVolumeId { get; set; }
+        public int? ShipmentOrderVolumeId { get; set; }
 
         /// <summary>
         /// Estado do volume.
@@ -57,7 +57,7 @@ namespace Intelipost.API.Model
         /// Estado do volume (transportadora).
         /// </summary>
         [JsonProperty("shipment_order_volume_state_history")]
-        public int ShipmentOrderVolumeStateHistory { get; set; }
+        public int? ShipmentOrderVolumeStateHistory { get; set; }
 
         /// <summary>
         /// Data do evento.
