@@ -25,6 +25,12 @@ namespace Intelipost.API.Model
         public int? ClientId { get; set; }
 
         /// <summary>
+        /// CEP de origem
+        /// </summary>
+        [JsonProperty("origin_zip_code")]
+        public string OriginZipCode { get; set; }
+
+        /// <summary>
         /// ID da cotação.
         /// </summary>
         [JsonProperty("quote_id")]

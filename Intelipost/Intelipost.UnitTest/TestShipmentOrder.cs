@@ -56,7 +56,7 @@ namespace Intelipost.UnitTest
                 ShippingQuarter = "Consolação",
                 ShippingCity = "São Paulo",
                 ShippingState = "São Paulo",
-                ShippingZipCode = "01311-000",
+                ShippingZipCode = "20010020",
                 ShippingCountry = "BR"
             };
 
@@ -72,15 +72,17 @@ namespace Intelipost.UnitTest
                 IsIcmsExempt = false,
                 TrackingCode = "SW123456789BR",
                 VolumeTypeCode = "box",
-                ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice() {
+                ShipmentOrderVolumeInvoice = new ShipmentOrderVolumeInvoice()
+                {
                     InvoiceSeries = "1",
                     InvoiveNumber = "1000",
                     InvoiceKey = "41140502834982004563550010000084111000132317",
-                    InvoiceDate = new DateTime(2015,08,20),
+                    InvoiceDate = new DateTime(2015, 08, 20),
                     InvoiceTotalValue = "45.99",
                     InvoiceProductsValue = "39.99",
                     InvoiceCfop = "2890"
                 },
+
 
             };
 
@@ -117,11 +119,13 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "pd00022",
-                    QuoteId = 296724,
-                    EstimatedDeliveryDate = new DateTime(2015,08,20),
+                    OrderNumber = "rms0009",
+                    QuoteId = null,
+                    OriginZipCode = "38445010",
+                    //EstimatedDeliveryDate = new DateTime(2015,08,20),
                     EndCustomer = endCustomer,
-                    ShipmentOrderVolumeArray = volumeArrayList
+                    ShipmentOrderVolumeArray = volumeArrayList,
+                    CustomerShippingCosts = 1
                 }
             };
 
