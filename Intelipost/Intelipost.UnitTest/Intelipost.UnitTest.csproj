@@ -57,6 +57,7 @@
     <Compile Include="TestGetShipmentOrder.cs" />
     <Compile Include="TestGetLabel.cs" />
     <Compile Include="TestQuoteByProduct.cs" />
+    <Compile Include="TestChangeDeliveryMethod.cs" />
     <Compile Include="TestShipped.cs" />
     <Compile Include="TestReadyForShipment.cs" />
     <Compile Include="TestQuote.cs" />

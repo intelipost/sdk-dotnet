@@ -53,12 +53,16 @@
     <Compile Include="Business\GetShipmentOrder.cs" />
     <Compile Include="Business\GetLabel.cs" />
     <Compile Include="Business\QuoteByProduct.cs" />
+    <Compile Include="Business\ChangeDeliveryMethod.cs" />
     <Compile Include="Business\Shipped.cs" />
     <Compile Include="Business\ReadyForShipment.cs" />
     <Compile Include="Business\Quote.cs" />
     <Compile Include="Business\ShipmentOrder.cs" />
     <Compile Include="Configure.cs" />
     <Compile Include="AutoComplete.cs" />
+    <Compile Include="Model\ChangeDeliveryMethod\ChangeDeliveryMethodVolumes.cs" />
+    <Compile Include="Model\ChangeDeliveryMethod\ChangeDeliveryMethod.cs" />
+    <Compile Include="ChangeDeliveryMethod.cs" />
     <Compile Include="Tracking.cs" />
     <Compile Include="Info.cs" />
     <Compile Include="GetShipmentOder.cs" />

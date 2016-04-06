@@ -56,7 +56,7 @@ namespace Intelipost.UnitTest
                 ShippingQuarter = "Consolação",
                 ShippingCity = "São Paulo",
                 ShippingState = "São Paulo",
-                ShippingZipCode = "20010020",
+                ShippingZipCode = "01311330",
                 ShippingCountry = "BR"
             };
 
@@ -119,9 +119,9 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "rms0009",
+                    OrderNumber = "rms0014",
                     QuoteId = null,
-                    OriginZipCode = "38445010",
+                    OriginZipCode = "22710440",
                     //EstimatedDeliveryDate = new DateTime(2015,08,20),
                     EndCustomer = endCustomer,
                     ShipmentOrderVolumeArray = volumeArrayList,
