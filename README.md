@@ -27,7 +27,7 @@ Dependencies
 
 Releases
 --------------------
-##Release 2.1.:
+##Release 2.1.0:
 - New Change Delivery Method;
 
 ##Release 2.0.1:
