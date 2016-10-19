@@ -14,7 +14,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna um  objeto com as informações do pedido</returns>
         internal Response<Model.ShipmentOrder> RequestNewShipmentOrder(Request<Model.ShipmentOrder> request)
         {
-            return new Infrastructure.JsonRequest.Request<Model.ShipmentOrder>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "shipment_order", "POST", request);
+            return new Infrastructure.JsonRequest.Request<Model.ShipmentOrder>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "shipment_order", "POST", request, null, Configure.PublicInstance.Platform);
         }
     }
 }

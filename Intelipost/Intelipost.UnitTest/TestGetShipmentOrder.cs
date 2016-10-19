@@ -36,7 +36,7 @@ namespace Intelipost.UnitTest
             new TestConfigure().TestInitialize();
             try
             {
-                var modelResponse = new API.GetShipmentOrder().RequestGetShipmentOrder("pd0001");                
+                var modelResponse = new API.GetShipmentOrder().RequestGetShipmentOrder("sdk0001");                
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)

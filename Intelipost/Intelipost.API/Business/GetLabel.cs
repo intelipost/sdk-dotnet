@@ -13,7 +13,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna as informações da etiqueta</returns>
         internal Response<Model.GetLabel> RequestGetLabel(string order_number, string shipment_order_volume_number)
         {
-            return new Infrastructure.JsonRequest.Request<Model.GetLabel>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/get_label/"+order_number+"/"+shipment_order_volume_number, "GET", null);
+            return new Infrastructure.JsonRequest.Request<Model.GetLabel>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/get_label/"+order_number+"/"+shipment_order_volume_number, "GET", null, null, Configure.PublicInstance.Platform);
         }
     }
 }

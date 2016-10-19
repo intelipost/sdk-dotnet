@@ -13,7 +13,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna as informações do pedido informado.</returns>
         internal Response<Model.GetShipmentOrder> RequestGetShipmentOrder(string OrderNumber)
         {
-            return new Infrastructure.JsonRequest.Request<Model.GetShipmentOrder>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/"+ OrderNumber, "GET", null);
+            return new Infrastructure.JsonRequest.Request<Model.GetShipmentOrder>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/"+ OrderNumber, "GET", null, null, Configure.PublicInstance.Platform);
         }
     }
 }

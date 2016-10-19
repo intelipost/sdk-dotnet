@@ -119,7 +119,7 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "rms0014",
+                    OrderNumber = "sdk0001",
                     QuoteId = null,
                     OriginZipCode = "22710440",
                     //EstimatedDeliveryDate = new DateTime(2015,08,20),

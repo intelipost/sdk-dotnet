@@ -86,7 +86,7 @@ namespace Intelipost.UnitTest
 
             try
             {
-                var modelResponse = new API.QuoteByProduct().RequestNewQuoteByProduct(modelRequest,"fc8e9d156fcfb48fbfe4c66febac48acce84e5af");
+                var modelResponse = new API.QuoteByProduct().RequestNewQuoteByProduct(modelRequest, "8c9da3f8ecd96acb2aae0cffb47e67d8fc94706a8083238a9e83ac144a4488f2");
 
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }

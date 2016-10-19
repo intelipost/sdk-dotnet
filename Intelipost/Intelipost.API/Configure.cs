@@ -12,9 +12,10 @@ namespace Intelipost.API
         /// <param name="apiKey">Key de acesso para a API.</param>
         /// <param name="logging">Se o Log será ativado para cada requisição feita.</param>
         /// <param name="logPath">Se o Log estiver ativo, é necessário passar o caminho completo de onde os arquivos serão gravados.</param>
-        public void Initialize(string apiKey, bool logging, string logPath)
+        public void Initialize(string apiKey, bool logging, string logPath, string platform = null)
         {
             Business.Configure.PublicInstance.ApiKey = apiKey;
+            Business.Configure.PublicInstance.Platform = platform;
             Business.Configure.PublicInstance.Logging = logging;
 
             if (logging)

@@ -14,7 +14,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna uma cotação preenchida ou mensagem de erro.</returns>
         internal Response<Model.Quote> RequestNewQuoteByProduct(Request<Model.Quote> request, string debug_hash = null)
         {
-            return new Infrastructure.JsonRequest.Request<Model.Quote>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "quote_by_product", "POST", request,debug_hash);
+            return new Infrastructure.JsonRequest.Request<Model.Quote>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "quote_by_product", "POST", request,debug_hash, Configure.PublicInstance.Platform);
         }
     }
 }

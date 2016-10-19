@@ -36,7 +36,7 @@ namespace Intelipost.UnitTest
             new TestConfigure().TestInitialize();
             try
             {
-                var modelResponse = new API.GetLabel().RequestGetLabel("pd0001","20");      
+                var modelResponse = new API.GetLabel().RequestGetLabel("sdk0001","1");      
                 Assert.IsFalse(modelResponse.Status == "ERROR", "Houve algum problema na requisição, por favor, verifique o Log gerado para esta resposta da requisição.");
             }
             catch (Exception ex)

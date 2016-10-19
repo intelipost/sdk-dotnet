@@ -25,12 +25,13 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
         /// <param name="debug_hash">Hash para utilização do modo debug</param>
-        internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null)
+        internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null, string platform = null)
         {
             HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action).Replace("//", "/").Replace(":/","://"));
             HttpWebRequest.Accept = "application/json";
             HttpWebRequest.ContentType = "application/json";
             HttpWebRequest.Headers.Add("api_key", apiKey);
+            HttpWebRequest.Headers.Add("platform", platform);
             HttpWebRequest.Headers.Add("charset", "UTF-8");
             HttpWebRequest.Headers.Add(".NetVersion", Environment.Version.ToString());
             HttpWebRequest.Headers.Add("APIVersion", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);
@@ -95,7 +96,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="method">Método de envio.</param>
         /// <param name="request">Entidade devidamente preenchida.</param>
         /// <returns>Retorna uma Entidade padrão de resposta da InteliPost.</returns>
-        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request, string debug_hash = null)
+        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request, string debug_hash = null, string platform = null)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -104,7 +105,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
 
             try
             {
-                CreateRequest(apiKey, url, action, method,debug_hash);
+                CreateRequest(apiKey, url, action, method,debug_hash, platform);
                 if(method.ToUpper() == "POST")
                     WriteStream(request);
 

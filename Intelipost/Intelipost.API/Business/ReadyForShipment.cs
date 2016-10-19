@@ -14,7 +14,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna um objeto com as informações da requisição.</returns>
         internal Response<Model.ReadyForShipment> RequestReadyForShipment(Request<Model.ReadyForShipment> request)
         {
-            return new Infrastructure.JsonRequest.Request<Model.ReadyForShipment>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/ready_for_shipment", "POST", request);
+            return new Infrastructure.JsonRequest.Request<Model.ReadyForShipment>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/shipment_order/ready_for_shipment", "POST", request, null, Configure.PublicInstance.Platform);
         }
     }
 }

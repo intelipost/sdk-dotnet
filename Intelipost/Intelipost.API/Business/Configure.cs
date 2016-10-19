@@ -21,6 +21,10 @@
         /// </summary>
         internal string ApiKey { get; set; }
         /// <summary>
+        /// Nome ou descrição da plataforma requisitante.
+        /// </summary>
+        internal string Platform { get; set; }
+        /// <summary>
         /// Se o Log será ativado para cada requisição feita.
         /// </summary>
         internal bool Logging { get; set; }

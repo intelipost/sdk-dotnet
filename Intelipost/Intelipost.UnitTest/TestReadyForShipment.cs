@@ -43,7 +43,7 @@ namespace Intelipost.UnitTest
             {
                 Content = new ReadyForShipment()
                 {
-                   OrderNumber = "pd00012"
+                   OrderNumber = "sdk0001"
                 }
             };
 
