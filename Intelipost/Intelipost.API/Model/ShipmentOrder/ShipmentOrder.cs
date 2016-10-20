@@ -61,6 +61,18 @@ namespace Intelipost.API.Model
         public string OrderNumber { get; set; }
 
         /// <summary>
+        /// Numero do Pedido
+        /// </summary>
+        [JsonProperty("sales_order_number")]
+        public string SalesOrderNumber { get; set; }
+
+        /// <summary>
+        /// Canal de vendas
+        /// </summary>
+        [JsonProperty("sales_channel")]
+        public string SalesChannel { get; set; }
+
+        /// <summary>
         /// Data estimada para entrega (UTC).
         /// </summary>
         [JsonProperty("estimated_delivery_date")]

@@ -48,6 +48,7 @@ namespace Intelipost.UnitTest
                 Quantity = 1,
                 SkuId = "123",
                 description = "produto 1",
+                ProductCategory = "cat01",
                 CanGroup = false
             };
 
@@ -61,6 +62,7 @@ namespace Intelipost.UnitTest
                 Quantity = 1,
                 SkuId = "123",
                 description = "produto 1",
+                ProductCategory = "cat01",
                 CanGroup = false
             };
 
@@ -79,7 +81,8 @@ namespace Intelipost.UnitTest
                         ExtraCostsAbsolute = 0,
                         ExtraCostsPercentage = 0,
                         LeadTimeBussinessDays = 0,
-                        DeliveryMethodIds = new int[] {1,2}               
+                        DeliveryMethodIds = new int[] {1,2}                       
+                                    
                     }        
                 }
             };

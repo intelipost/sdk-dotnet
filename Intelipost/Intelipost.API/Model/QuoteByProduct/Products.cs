@@ -63,6 +63,11 @@ namespace Intelipost.API.Model
         [JsonProperty("can_group")]
         public bool CanGroup { get; set; }
 
+        /// <summary>
+        /// Categoria do produto.
+        /// </summary>
+        [JsonProperty("product_category")]
+        public string ProductCategory { get; set; }
 
     }
 }
