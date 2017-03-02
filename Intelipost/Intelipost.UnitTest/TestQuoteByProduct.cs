@@ -69,6 +69,11 @@ namespace Intelipost.UnitTest
             List<Products> produtos = new List<Products>();
             produtos.Add(produto1);
             produtos.Add(produto2);
+
+
+
+
+
             var modelRequest = new Request<Quote>()
             {
                 Content = new Quote()
@@ -81,8 +86,8 @@ namespace Intelipost.UnitTest
                         ExtraCostsAbsolute = 0,
                         ExtraCostsPercentage = 0,
                         LeadTimeBussinessDays = 0,
-                        DeliveryMethodIds = new int[] {1,2}                       
-                                    
+                        DeliveryMethodIds = new int[] { 1, 2 },
+                        ShippedDate = (DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString()).ToString()
                     }        
                 }
             };

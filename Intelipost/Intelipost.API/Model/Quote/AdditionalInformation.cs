@@ -56,5 +56,12 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("sales_channel")]
         public string SalesChannel { get; set; }
+
+        /// <summary>
+        /// Data estimada do Despacho.
+        /// </summary>
+        [JsonProperty("shipped_date")]
+        public string ShippedDate { get; set; }
+
     }
 }
