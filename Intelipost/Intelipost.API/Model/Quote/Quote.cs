@@ -15,7 +15,7 @@ namespace Intelipost.API.Model
         /// ID da Ordem de Pedido.
         /// </summary>
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// ID do cliente.

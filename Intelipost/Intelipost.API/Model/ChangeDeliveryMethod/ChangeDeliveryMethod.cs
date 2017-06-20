@@ -21,7 +21,7 @@ namespace Intelipost.API.Model
         /// ID da cotação.
         /// </summary>
         [JsonProperty("quote_id")]
-        public int? QuoteId { get; set; }
+        public long? QuoteId { get; set; }
 
         /// <summary>
         /// ID do método de envio escolhido.

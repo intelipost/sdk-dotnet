@@ -59,8 +59,8 @@ namespace Intelipost.UnitTest
             {
                 Content = new ChangeDeliveryMethod()
                 {
-                    DeliveryMethodId = 1,
-                    OrderNumber = "TESTE0006",
+                    DeliveryMethodId = 2,
+                    OrderNumber = "sdk0003",
                     QuoteId = null,
                     ClientId = 2354,
                     EstimatedDeliveryDate = new DateTime(2016, 04, 20),

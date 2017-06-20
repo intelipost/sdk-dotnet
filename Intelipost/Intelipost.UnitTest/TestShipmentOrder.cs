@@ -119,7 +119,9 @@ namespace Intelipost.UnitTest
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "sdk0001",
+                    OrderNumber = "sdk0003",
+                    SalesOrderNumber = "s-sdk0002",
+                    SalesChannel = "SC Teste",
                     QuoteId = null,
                     OriginZipCode = "22710440",
                     //EstimatedDeliveryDate = new DateTime(2015,08,20),
