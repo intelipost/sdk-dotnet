@@ -13,7 +13,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna os métodos de envio ativos para o cliente.</returns>
         internal Response<Model.Info> RequestInfo()
         {
-            return new Infrastructure.JsonRequest.Request<Model.Info>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/info/", "GET", null, null, Configure.PublicInstance.Platform);
+            return new Infrastructure.JsonRequest.Request<Model.Info>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/info/", "GET", null, null, Configure.PublicInstance.Platform, Configure.PublicInstance.PlatformVersion, Configure.PublicInstance.Plugin, Configure.PublicInstance.PluginVersion);
         }
     }
 }

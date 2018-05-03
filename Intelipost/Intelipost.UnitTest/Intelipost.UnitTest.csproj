@@ -58,10 +58,12 @@
     <Compile Include="TestGetLabel.cs" />
     <Compile Include="TestQuoteByProduct.cs" />
     <Compile Include="TestChangeDeliveryMethod.cs" />
+    <Compile Include="TestReadyForShipmentWithDate.cs" />
     <Compile Include="TestShipped.cs" />
     <Compile Include="TestReadyForShipment.cs" />
     <Compile Include="TestQuote.cs" />
     <Compile Include="TestShipmentOrder.cs" />
+    <Compile Include="TestShippedWithDate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Intelipost.API\Intelipost.API.csproj">

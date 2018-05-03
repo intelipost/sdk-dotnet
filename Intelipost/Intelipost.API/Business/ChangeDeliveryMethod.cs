@@ -14,7 +14,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna um  objeto com as informações do pedido</returns>
         internal Response<Model.ChangeDeliveryMethod> RequestChangeDeliveryMethod(Request<Model.ChangeDeliveryMethod> request)
         {
-            return new Infrastructure.JsonRequest.Request<Model.ChangeDeliveryMethod>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "shipment_order/change_delivery_method", "POST", request, null, Configure.PublicInstance.Platform);
+            return new Infrastructure.JsonRequest.Request<Model.ChangeDeliveryMethod>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "shipment_order/change_delivery_method", "POST", request, null, Configure.PublicInstance.Platform, Configure.PublicInstance.PlatformVersion, Configure.PublicInstance.Plugin, Configure.PublicInstance.PluginVersion);
         }
     }
 }

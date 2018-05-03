@@ -36,6 +36,12 @@ namespace Intelipost.API.Model
         public string DestinationZipCode { get; set; }
 
         /// <summary>
+        /// Tipo de cotação (DYNAMIC_BOX_ALL_ITEMS, REGISTERED_BOXES, DYNAMIC_BOX_SINGLE_ITEM, DYNAMIC_BOX_BY_SKU)
+        /// </summary>
+        [JsonProperty("quoting_mode")]
+        public string QuotingMode { get; set; }
+
+        /// <summary>
         /// Data de criação da cotação (UTC).
         /// </summary>
         [JsonProperty("created")]

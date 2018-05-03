@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using Intelipost.API.Infrastructure.TimestampToDateTime;
+using Newtonsoft.Json;
+using System;
 
 namespace Intelipost.API.Model
 {
@@ -15,6 +17,12 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("delivery_estimate_business_days")]
         public int DeliveryEstmateBusinessDay { get; set; }
+
+        /// <summary>
+        /// Prazo de entrega da transportadora (sem acréscimos)
+        /// </summary>
+        [JsonProperty("delivery_estimate_transit_time_business_days")]
+        public int DeliveryEstimateTransitTimeBusinessDays { get; set; }
 
         /// <summary>
         /// Custo de envio do provedor.
@@ -41,6 +49,12 @@ namespace Intelipost.API.Model
         public string DeliveryNote { get; set; }
 
         /// <summary>
+        /// Peso cubado
+        /// </summary>
+        [JsonProperty("cubic_weight")]
+        public double? CubicWeight { get; set; }
+
+        /// <summary>
         /// Tipo do método de envio.
         /// </summary>
         [JsonProperty("delivery_method_type")]
@@ -58,6 +72,31 @@ namespace Intelipost.API.Model
         [JsonProperty("logistic_provider_name")]
         public string LogisticProviderName { get; set; }
 
+        /// <summary>
+        /// Indica se é entrega Agendada
+        /// </summary>
+        [JsonProperty("scheduling_enabled")]
+        public bool SchedulingEnabled { get; set; }
 
+        /// <summary>
+        /// Data mínima estimada de entrega
+        /// </summary>
+        [JsonProperty("delivery_estimated_date_min")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? DeliveryEstimatedDateMin { get; set; }
+
+        /// <summary>
+        /// Data estimada de entrega
+        /// </summary>
+        [JsonProperty("delivery_estimated_date_exact")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? DeliveryEstimatedDateExact { get; set; }
+
+        /// <summary>
+        /// Data máxima estimada de entrega
+        /// </summary>
+        [JsonProperty("delivery_estimated_date_max")]
+        [JsonConverter(typeof(TimestampToDateTime))]
+        public DateTime? DeliveryEstimatedDateMax { get; set; }
     }
 }

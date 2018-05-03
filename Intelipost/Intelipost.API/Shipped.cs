@@ -1,10 +1,12 @@
 ﻿using Intelipost.API.Model;
+using System;
 
 namespace Intelipost.API
 {
     /// <summary>
     /// Classe destinada a executar a requisição para marcar um pedido como "Enviado".
     /// </summary>
+    [Obsolete("Use ShippedWithDate instead", false)]
     public class Shipped
     {
         /// <summary>

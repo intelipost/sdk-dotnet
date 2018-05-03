@@ -114,20 +114,33 @@ namespace Intelipost.UnitTest
             volumeArrayList.Add(volumeArray1);
             volumeArrayList.Add(volumeArray2);
 
+            var additionalInformation = new Dictionary<string, string>();
+            additionalInformation.Add("key", "val1");
+            additionalInformation.Add("key2", "val2");
+
+            var externalOrderNumbers = new Dictionary<string, string>();
+            externalOrderNumbers.Add("marketplace", "PEDIDO-MKT-030");
+
             var modelRequest = new Request<ShipmentOrder>()
             {
                 Content = new ShipmentOrder()
                 {
                     DeliveryMethodId = 1,
-                    OrderNumber = "sdk0003",
+                    OrderNumber = "PEDIDO-013",
                     SalesOrderNumber = "s-sdk0002",
                     SalesChannel = "SC Teste",
                     QuoteId = null,
                     OriginZipCode = "22710440",
+                    OriginWarehouseCode = "CD01",
                     //EstimatedDeliveryDate = new DateTime(2015,08,20),
                     EndCustomer = endCustomer,
                     ShipmentOrderVolumeArray = volumeArrayList,
-                    CustomerShippingCosts = 1
+                    ShipmentOrderType = "NORMAL",
+                    CustomerShippingCosts = 1,
+                    Scheduled = false,
+                    Created = new DateTime(2018, 05, 02),
+                    AdditionalInformation = additionalInformation,
+                    ExternalOrderNumbers = externalOrderNumbers
                 }
             };
 
