@@ -25,6 +25,18 @@
         /// </summary>
         internal string Platform { get; set; }
         /// <summary>
+        /// Número da versão da plataforma requisitante
+        /// </summary>
+        internal string PlatformVersion { get; set; }
+        /// <summary>
+        /// Descrição do plugin requisitante
+        /// </summary>
+        internal string Plugin { get; set; }
+        /// <summary>
+        /// Número da versão do plugin requisitante
+        /// </summary>
+        internal string PluginVersion { get; set; }
+        /// <summary>
         /// Se o Log será ativado para cada requisição feita.
         /// </summary>
         internal bool Logging { get; set; }

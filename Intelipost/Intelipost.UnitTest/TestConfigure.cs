@@ -27,6 +27,7 @@ namespace Intelipost.UnitTest
         [TestMethod]
         public void TestInitialize()
         {
+            
         }
     }
 }

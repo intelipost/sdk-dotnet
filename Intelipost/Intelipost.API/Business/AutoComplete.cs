@@ -13,7 +13,7 @@ namespace Intelipost.API.Business
         /// <returns>Retorna as informações do CEP informado.</returns>
         internal Response<Model.AutoComplete> RequestAutocomplete(string cep)
         {
-            return new Infrastructure.JsonRequest.Request<Model.AutoComplete>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/cep_location/address_complete/"+cep, "GET", null, null, Configure.PublicInstance.Platform);
+            return new Infrastructure.JsonRequest.Request<Model.AutoComplete>().Execute(Configure.PublicInstance.ApiKey, Configure.PublicInstance.ApiUrl, "/cep_location/address_complete/"+cep, "GET", null, null, Configure.PublicInstance.Platform, Configure.PublicInstance.PlatformVersion, Configure.PublicInstance.Plugin, Configure.PublicInstance.PluginVersion);
         }
     }
 }

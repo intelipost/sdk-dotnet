@@ -63,5 +63,33 @@ namespace Intelipost.API.Model
         [JsonProperty("shipment_order_volume_state_localized")]
         public string ShipmentOrderVolumeStateLocalized { get; set; }
         
+        /// <summary>
+        /// Status do rastreamento
+        /// </summary>
+        [JsonProperty("tracking_state")]
+        public string TrackingState { get; set; }
+
+        /// <summary>
+        /// Mensagem traduzida no modelo Intelipost
+        /// </summary>
+        [JsonProperty("esprinter_message")]
+        public string EsprinterMessage { get; set; }
+
+        /// <summary>
+        /// Micro status do volume do pedido de envio
+        /// </summary>
+        [JsonProperty("shipment_volume_micro_state")]
+        public ShipmentOrderVolumeMicroState ShipmentVolumeMicroState { get; set; }
+
+        /// <summary>
+        /// Dados dos anexos
+        /// </summary>
+        public List<Attachments> Attachments { get; set; }
+
+        public History()
+        {
+            ShipmentVolumeMicroState = new ShipmentOrderVolumeMicroState();
+            Attachments = new List<Attachments>();
+        }
     }
 }

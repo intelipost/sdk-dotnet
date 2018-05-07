@@ -25,7 +25,7 @@ namespace Intelipost.API.Model
         /// <summary>
         /// Data de criação do volume.
         /// </summary>
-        [JsonProperty("Created")]
+        [JsonProperty("created")]
         [JsonConverter(typeof(TimestampToDateTime))]
         public DateTime? Created { get; set; }
 
@@ -64,6 +64,17 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("event_date")]
         [JsonConverter(typeof(TimestampToDateTime))]
-        public DateTime? EventDate { get; set; }    
+        public DateTime? EventDate { get; set; }
+
+        /// <summary>
+        /// Descrição do micro status de rastreamento
+        /// </summary>
+        [JsonProperty("shipment_volume_micro_state")]
+        public ShipmentOrderVolumeMicroState ShipmentVolumeMicroState { get; set; }
+
+        public ShipmentOrderVolumeStateHistoryArray()
+        {
+            ShipmentVolumeMicroState = new Model.ShipmentOrderVolumeMicroState();
+        }
     }
 }

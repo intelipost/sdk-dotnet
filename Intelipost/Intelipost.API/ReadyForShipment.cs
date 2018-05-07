@@ -1,10 +1,12 @@
 ﻿using Intelipost.API.Model;
+using System;
 
 namespace Intelipost.API
 {
     /// <summary>
     /// Classe destinada realizar a requisição para marcar um pedido como "Pronto para Envio".
     /// </summary>
+    [Obsolete("Use ReadyForShipmentWithDate instead", false)]
     public class ReadyForShipment
     {
         /// <summary>

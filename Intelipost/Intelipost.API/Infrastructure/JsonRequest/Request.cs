@@ -25,7 +25,11 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
         /// <param name="debug_hash">Hash para utilização do modo debug</param>
-        internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null, string platform = null)
+        /// <param name="platform">Plataforma requisitante</param>
+        /// <param name="platformVersion">Versão da plataforma requisitante</param>
+        /// <param name="plugin">Plugin requisitante</param>
+        /// <param name="pluginVersion">Versão do plugin requisitante</param>
+        internal void CreateRequest(string apiKey, string url, string action, string method, string debug_hash = null, string platform = null, string platformVersion = null, string plugin = null, string pluginVersion = null)
         {
             HttpWebRequest = (HttpWebRequest)WebRequest.Create(String.Format("{0}/{1}", url, action).Replace("//", "/").Replace(":/","://"));
             HttpWebRequest.Accept = "application/json";
@@ -39,6 +43,15 @@ namespace Intelipost.API.Infrastructure.JsonRequest
             HttpWebRequest.Method = method;
             if(debug_hash != null)
                 HttpWebRequest.Headers.Add("debug", debug_hash);
+
+            if (platformVersion != null)
+                HttpWebRequest.Headers.Add("platform-version", platformVersion);
+
+            if (plugin != null)
+                HttpWebRequest.Headers.Add("plugin", plugin);
+
+            if (pluginVersion != null)
+                HttpWebRequest.Headers.Add("plugin-version", pluginVersion);
         }
 
         /// <summary>
@@ -95,8 +108,12 @@ namespace Intelipost.API.Infrastructure.JsonRequest
         /// <param name="action">Ação a ser enviada.</param>
         /// <param name="method">Método de envio.</param>
         /// <param name="request">Entidade devidamente preenchida.</param>
+        /// <param name="platform">Plataforma da requisição</param>
+        /// <param name="platformVersion">Versão da plataforma requisitante</param>
+        /// <param name="plugin">Plugin requisitante</param>
+        /// <param name="pluginVersion">Versão do plugin requisitante</param>
         /// <returns>Retorna uma Entidade padrão de resposta da InteliPost.</returns>
-        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request, string debug_hash = null, string platform = null)
+        internal Response<T> Execute(string apiKey, string url, string action, string method, Model.Request<T> request, string debug_hash = null, string platform = null, string platformVersion = null, string plugin = null, string pluginVersion = null)
         {
             var stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -105,7 +122,7 @@ namespace Intelipost.API.Infrastructure.JsonRequest
 
             try
             {
-                CreateRequest(apiKey, url, action, method,debug_hash, platform);
+                CreateRequest(apiKey, url, action, method,debug_hash, platform, platformVersion, plugin, pluginVersion);
                 if(method.ToUpper() == "POST")
                     WriteStream(request);
 

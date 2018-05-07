@@ -18,19 +18,19 @@ namespace Intelipost.API.Model
         /// <summary>
         /// Custo extra.
         /// </summary>
-        [JsonProperty("extra_costs_absolute")]
+        [JsonProperty("extra_cost_absolute")]
         public double? ExtraCostsAbsolute { get; set; }
 
         /// <summary>
         /// Custo extra(%)
         /// </summary>
-        [JsonProperty("extra_costs_percentage")]
+        [JsonProperty("extra_cost_percentage")]
         public double ExtraCostsPercentage { get; set; }
 
         /// <summary>
         /// Prazo adicional em dias uteis.
         /// </summary>
-        [JsonProperty("lead_time_bussiness_days")]
+        [JsonProperty("lead_time_business_days")]
         public int? LeadTimeBussinessDays { get; set; }
 
         /// <summary>
@@ -62,6 +62,18 @@ namespace Intelipost.API.Model
         /// </summary>
         [JsonProperty("shipped_date")]
         public string ShippedDate { get; set; }
+
+        /// <summary>
+        /// CIF ou FOB
+        /// </summary>
+        [JsonProperty("payment_type")]
+        public string PaymentType { get; set; }
+
+        /// <summary>
+        /// Se cliente possui inscrição estadual
+        /// </summary>
+        [JsonProperty("is_state_tax_payer")]
+        public bool IsStateTaxPayer { get; set; }
 
     }
 }

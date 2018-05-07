@@ -29,9 +29,31 @@ namespace Intelipost.API.Model
         /// <summary>
         /// Nome da transportadora.
         /// </summary>
-        [JsonProperty("logistic_provider_name")]
+        [JsonProperty("logistics_provider_name")]
         public string LogisticProviderName { get; set; }
 
+        /// <summary>
+        /// Id da taxa da transportadora
+        /// </summary>
+        [JsonProperty("logistics_provider_tax_id")]
+        public string LogisticsProviderTaxId { get; set; }
 
+        /// <summary>
+        /// Código da Transportadora
+        /// </summary>
+        [JsonProperty("logistics_provider_code")]
+        public string LogisticsProviderCode { get; set; }
+
+        /// <summary>
+        /// ID da Transportadora
+        /// </summary>
+        [JsonProperty("logistics_provider_id")]
+        public int LogisticsProviderId { get; set; }
+
+        /// <summary>
+        /// Código de Licença Transportadora
+        /// </summary>
+        [JsonProperty("logistics_provider_license_code")]
+        public string LogisticsProviderLicenseCode { get; set; }
     }
 }

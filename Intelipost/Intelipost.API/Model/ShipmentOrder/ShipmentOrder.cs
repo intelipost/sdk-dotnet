@@ -114,6 +114,114 @@ namespace Intelipost.API.Model
         public EndCustomer EndCustomer { get; set; }
 
         /// <summary>
+        /// Nome do depósito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_name")]
+        public string OriginName { get; set; }
+
+        /// <summary>
+        /// CNPJ ou CPF do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_federal_tax_payer_id")]
+        public string OriginFederalTaxPayerId { get; set; }
+
+        /// <summary>
+        /// Telefone do embarcador para cenarios de multi remetentes.
+        /// </summary>
+        [JsonProperty("origin_customer_phone")]
+        public string OriginCustomerPhone { get; set; }
+
+        /// <summary>
+        /// Email do embarcador para cenarios de multi remetentes.
+        /// </summary>
+        [JsonProperty("origin_customer_email")]
+        public string OriginCustomerEmail { get; set; }
+
+        /// <summary>
+        /// Logradouro do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_street")]
+        public string OriginStreet { get; set; }
+
+        /// <summary>
+        /// Número do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_number")]
+        public string OriginNumber { get; set; }
+
+        /// <summary>
+        /// Informações adicionais do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_additional")]
+        public string OriginAdditional { get; set; }
+
+        /// <summary>
+        /// Referencia do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_reference")]
+        public string OriginReference { get; set; }
+
+        /// <summary>
+        /// Bairro do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_quarter")]
+        public string OriginQuarter { get; set; }
+
+        /// <summary>
+        /// UF do estado do deposito/embarcador de origem
+        /// </summary>
+        [JsonProperty("origin_state_code")]
+        public string OriginStateCode { get; set; }
+
+        /// <summary>
+        /// Código do deposito de origem
+        /// </summary>
+        [JsonProperty("origin_warehouse_code")]
+        public string OriginWarehouseCode { get; set; }
+
+        /// <summary>
+        /// Tipo de entrega
+        /// </summary>
+        [JsonProperty("shipment_order_type")]
+        public string ShipmentOrderType { get; set; }
+
+        /// <summary>
+        /// Em caso de Logística Reversa, tipo da Reversa. Utilizar "dropoff" em caso de pedido depositado na Agência dos Correios ou "pickup" em caso de coleta em casa.
+        /// </summary>
+        [JsonProperty("shipment_order_sub_type")]
+        public string ShipmentOrderSubType { get; set; }
+
+        /// <summary>
+        /// Data estimada de entrega da transportadora
+        /// </summary>
+        [JsonProperty("estimated_delivery_days_lp")]
+        public string EstimatedDeliveryDaysLp { get; set; }
+
+        /// <summary>
+        /// Indica se é um re-envio
+        /// </summary>
+        [JsonProperty("parent_shipment_order_number")]
+        public string ParentShipmentOrderNumber { get; set; }
+
+        /// <summary>
+        /// Horário inicial da entrega agendada
+        /// </summary>
+        [JsonProperty("scheduling_window_start")]
+        public string SchedulingWindowStart { get; set; }
+
+        /// <summary>
+        /// Horário final da entrega agendada
+        /// </summary>
+        [JsonProperty("scheduling_window_end")]
+        public string SchedulingWindowEnd { get; set; }
+
+        /// <summary>
+        /// Indica se é uma entrega agendada
+        /// </summary>
+        [JsonProperty("scheduled")]
+        public bool Scheduled { get; set; }
+
+        /// <summary>
         /// Status do volume.
         /// </summary>
         [JsonProperty("shipment_order_volume_state")]
@@ -132,10 +240,24 @@ namespace Intelipost.API.Model
         [JsonProperty("shipment_order_volume_array")]
         public List<ShipmentOrderVolumeArray> ShipmentOrderVolumeArray { get; set; }
 
+        /// <summary>
+        /// Informações adicionais do pedido de envio. Este objeto suporta N campos chave => valor
+        /// </summary>
+        [JsonProperty("additional_information")]
+        public Dictionary<string,string> AdditionalInformation { get; set; }
+
+        /// <summary>
+        /// Números adicionais para identificação do pedido em integrações
+        /// </summary>
+        [JsonProperty("external_order_numbers")]
+        public Dictionary<string, string> ExternalOrderNumbers { get; set; }
+
         public ShipmentOrder()
         {
             EndCustomer = new Model.EndCustomer();
             ShipmentOrderVolumeArray = new List<Model.ShipmentOrderVolumeArray>();
+            AdditionalInformation = new Dictionary<string, string>();
+            ExternalOrderNumbers = new Dictionary<string, string>();
         }
         public bool ShouldSerializeCreated()
         {

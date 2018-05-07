@@ -66,3 +66,16 @@ C:\Users\user\Documents\GitHub\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Deb
 C:\Users\user\Documents\GitHub\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.xml
 C:\Users\user\Documents\GitHub\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.dll
 C:\Users\user\Documents\GitHub\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.pdb
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.UnitTest.dll
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.UnitTest.pdb
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.API.dll
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Intelipost.API.pdb
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\bin\Debug\pt-BR\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csprojResolveAssemblyReference.cache
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csproj.CoreCompileInputs.cache
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.csproj.CopyComplete
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.dll
+C:\Projects\sdk-dotnet\Intelipost\Intelipost.UnitTest\obj\Debug\Intelipost.UnitTest.pdb
