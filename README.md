@@ -10,8 +10,14 @@ https://www.nuget.org/packages/api-intelipost/
 
 To install InteliPost API, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console)
 
-PM> Install-Package InteliPost.API
+```PM> Install-Package InteliPost.API```
 
+Usage
+------------
+Add your Api-Key and log file path:
+```csharp
+new Configure().Initialize({api_key}, true, {log_path});
+```
 
 
 Documentation
@@ -25,35 +31,9 @@ Dependencies
 - .NETFramework ≥ 4.0
 - Newtonsoft.Json (≥ 7.0.1)
 
-Releases
+Last Release
 --------------------
-##Release 2.1.0:
+### Release 2.1.0:
 - New Change Delivery Method;
 
-##Release 2.0.1:
-- New Tracking;
-
-##Release 2.0.0:
-- New QuoteByProduct;
-- New ShipmentOrder;
-- New GetShipmentOrder;
-- New GetLabel;
-- New Shipped;
-- New ReadyForShipment;
-- New Info;
-- New Autocomplete;
-
-##Release 1.0.3:
-- Log path issue corrected;
-
-##Release 1.0.2:
-- Correcting Release Notes;
-
-##Release 1.0.1:
-- Correcting folder structure;
-
-##Release 1.0.0:
-- Configuration
---- Log can be turn on or off;
---- If Log on, path need to be pointed;
-- New Quote;
+> See [all release notes](https://github.com/intelipost/sdk-dotnet/releases)
