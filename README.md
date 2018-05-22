@@ -34,7 +34,8 @@ Para utilizar o SDK é necessário:
 * **AutoComplete** - GET ( */cep_location/address_complete/{cep}* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var modelResponse = new API.AutoComplete().RequestAutoComplete("04012080");      
 ```
@@ -42,7 +43,8 @@ Para utilizar o SDK é necessário:
 * **ChangeDeliveryMethod** - POST ( */shipment_order/change_delivery_method* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var vol1 = new ChangeDeliveryMethodVolumes()
     {
@@ -77,7 +79,8 @@ Para utilizar o SDK é necessário:
 * **GetLabel** - GET ( */shipment_order/get_label/{order_number}/{shipment_order_volume_number}* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var modelResponse = new API.GetLabel().RequestGetLabel("sdk0001","1");
 ```
@@ -85,7 +88,8 @@ Para utilizar o SDK é necessário:
 * **GetShipmentOrder** - GET ( */shipment_order/{order_number}* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var modelResponse = new API.GetShipmentOrder().RequestGetShipmentOrder("PEDIDO-013");
 ```
@@ -93,7 +97,8 @@ Para utilizar o SDK é necessário:
 * **Info** - GET ( */info* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var modelResponse = new API.Info().RequestInfo();
 ```
@@ -101,7 +106,8 @@ Para utilizar o SDK é necessário:
 * **Quote** - POST ( */quote* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var volumes = new List<Volume>();
     var volume1 = new Volume()
@@ -157,7 +163,8 @@ Para utilizar o SDK é necessário:
 * **QuoteByProduct** - POST ( */quote_by_product* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     Products produto1 = new Products() {
         Weight = 1,
@@ -214,7 +221,8 @@ Para utilizar o SDK é necessário:
 * **ReadyForShipmentWithDate** - POST ( */shipment_order/multi/ready_for_shipment/with_date* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     ReadyForShipmentWithDate[] orderArray = new ReadyForShipmentWithDate[2];
     orderArray[0] = new ReadyForShipmentWithDate()
@@ -240,7 +248,8 @@ Para utilizar o SDK é necessário:
 * **ShipmentOrder** - POST ( */shipment_order* )
 
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     var endCustomer = new EndCustomer()
     {
@@ -351,7 +360,8 @@ Para utilizar o SDK é necessário:
 
 * **ShippedWithDate** - POST ( */shipment_order/multi/shipped/with_date* )
 ```csharp
-    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", plugin: "my-connector", pluginVersion: "v1.1.2");
+    new Configure().Initialize("Api-Key", false, "", platform: "my-ecommerce", platformVersion: "v1.0", 
+                                plugin: "my-connector", pluginVersion: "v1.1.2");
 
     ShippedWithDate[] orderArray = new ShippedWithDate[2];
     orderArray[0] = new ShippedWithDate()
